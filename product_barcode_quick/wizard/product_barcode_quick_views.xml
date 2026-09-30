@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_barcode_quick_view_form" model="ir.ui.view">
+        <field name="name">product.barcode.quick.form</field>
+        <field name="model">product.barcode.quick</field>
+        <field name="arch" type="xml">
+            <form string="New product">
+                <div class="alert alert-warning" role="alert" invisible="not barcode_warning">
+                    <field name="barcode_warning" nolabel="1" readonly="1"/>
+                </div>
+                <group>
+                    <group>
+                        <label for="barcode"/>
+                        <div class="d-flex gap-2 align-items-center">
+                            <field name="barcode" widget="barcode_camera_char" placeholder="Scan or type, or generate an in-store code"/>
+                            <button name="action_generate_barcode" type="object" string="Generate" class="btn-secondary btn-sm"
+                                    invisible="barcode" help="Generate an in-store EAN-13 code"/>
+                        </div>
+                        <field name="name" placeholder="e.g. Cola 330ml"/>
+                        <field name="list_price"/>
+                        <field name="standard_price"/>
+                    </group>
+                    <group>
+                        <field name="categ_id"/>
+                        <field name="uom_id" groups="uom.group_uom"/>
+                        <field name="default_code"/>
+                        <field name="sale_ok"/>
+                        <field name="purchase_ok"/>
+                        <field name="print_label"/>
+                    </group>
+                </group>
+                <field name="image_1920" widget="image" class="oe_avatar float-start" options="{'size': [96, 96]}"/>
+                <footer>
+                    <button name="action_create" type="object" string="Create" class="btn-primary" data-hotkey="q"/>
+                    <button name="action_create_and_open" type="object" string="Create and edit details" class="btn-secondary"/>
+                    <button special="cancel" string="Discard" class="btn-secondary" data-hotkey="x"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_barcode_quick" model="ir.actions.act_window">
+        <field name="name">New product</field>
+        <field name="res_model">product.barcode.quick</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

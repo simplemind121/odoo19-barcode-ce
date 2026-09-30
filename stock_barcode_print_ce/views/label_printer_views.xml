@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="barcode_label_printer_view_list" model="ir.ui.view">
+        <field name="name">barcode.label.printer.list</field>
+        <field name="model">barcode.label.printer</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="agent_id"/>
+                <field name="target"/>
+                <field name="language"/>
+                <field name="width_mm"/>
+                <field name="height_mm"/>
+            </list>
+        </field>
+    </record>
+    <record id="barcode_label_printer_view_form" model="ir.ui.view">
+        <field name="name">barcode.label.printer.form</field>
+        <field name="model">barcode.label.printer</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_test_print" type="object" string="Print a test label" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group string="Connection">
+                            <field name="name"/>
+                            <field name="agent_id"/>
+                            <field name="target"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                        </group>
+                        <group string="Label">
+                            <field name="language"/>
+                            <field name="dpi"/>
+                            <field name="width_mm"/>
+                            <field name="height_mm"/>
+                            <field name="gap_mm"/>
+                            <field name="darkness"/>
+                            <field name="show_price"/>
+                            <field name="tspl_invert" invisible="language != 'tspl'"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="action_barcode_label_printer" model="ir.actions.act_window">
+        <field name="name">Label printers</field>
+        <field name="res_model">barcode.label.printer</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="barcode_label_agent_view_form" model="ir.ui.view">
+        <field name="name">barcode.label.agent.form</field>
+        <field name="model">barcode.label.agent</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_regenerate_token" type="object" string="New token"
+                            confirm="The running agent will stop working until you update its token. Continue?"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="token" readonly="1"/>
+                        <field name="last_seen"/>
+                        <field name="company_id" groups="base.group_multi_company"/>
+                    </group>
+                    <p class="text-muted">Run the agent on a computer in the warehouse network:
+                        <code>python3 label_print_agent.py --url https://your-odoo --token TOKEN</code>
+                        (the script is in the module folder <code>tools/</code>).</p>
+                    <field name="printer_ids">
+                        <list><field name="name"/><field name="target"/><field name="language"/></list>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="barcode_label_agent_view_list" model="ir.ui.view">
+        <field name="name">barcode.label.agent.list</field>
+        <field name="model">barcode.label.agent</field>
+        <field name="arch" type="xml">
+            <list><field name="name"/><field name="last_seen"/></list>
+        </field>
+    </record>
+    <record id="action_barcode_label_agent" model="ir.actions.act_window">
+        <field name="name">Print agents</field>
+        <field name="res_model">barcode.label.agent</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="barcode_label_job_view_list" model="ir.ui.view">
+        <field name="name">barcode.label.job.list</field>
+        <field name="model">barcode.label.job</field>
+        <field name="arch" type="xml">
+            <list create="0" decoration-danger="state == 'error'" decoration-muted="state == 'done'">
+                <field name="create_date" string="Time"/>
+                <field name="name"/>
+                <field name="printer_id"/>
+                <field name="label_count"/>
+                <field name="user_id"/>
+                <field name="state"/>
+                <field name="error"/>
+                <button name="action_retry" type="object" string="Retry" invisible="state not in ('error', 'sent')"/>
+            </list>
+        </field>
+    </record>
+    <record id="action_barcode_label_job" model="ir.actions.act_window">
+        <field name="name">Print jobs</field>
+        <field name="res_model">barcode.label.job</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <record id="view_users_form_label_printer" model="ir.ui.view">
+        <field name="name">res.users.form.label.printer</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Label printing" name="label_printing" groups="stock.group_stock_manager">
+                    <group><field name="bc_label_printer_id"/></group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_server_print_locations" model="ir.actions.server">
+        <field name="name">Print labels on label printer</field>
+        <field name="model_id" ref="stock.model_stock_location"/>
+        <field name="binding_model_id" ref="stock.model_stock_location"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_bc_direct_print()</field>
+    </record>
+    <record id="action_server_print_packages" model="ir.actions.server">
+        <field name="name">Print labels on label printer</field>
+        <field name="model_id" ref="stock.model_stock_package"/>
+        <field name="binding_model_id" ref="stock.model_stock_package"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_bc_direct_print()</field>
+    </record>
+    <record id="action_server_print_lots" model="ir.actions.server">
+        <field name="name">Print labels on label printer</field>
+        <field name="model_id" ref="stock.model_stock_lot"/>
+        <field name="binding_model_id" ref="stock.model_stock_lot"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_bc_direct_print()</field>
+    </record>
+
+    <menuitem id="menu_label_printing" name="Label printing" parent="stock_barcode_ce.menu_stock_barcode_ce_config" sequence="40"/>
+    <menuitem id="menu_label_printers" name="Label printers" parent="menu_label_printing" action="action_barcode_label_printer" sequence="1"/>
+    <menuitem id="menu_label_agents" name="Print agents" parent="menu_label_printing" action="action_barcode_label_agent" sequence="2"/>
+    <menuitem id="menu_label_jobs" name="Print jobs" parent="menu_label_printing" action="action_barcode_label_job" sequence="3"/>
+</odoo>

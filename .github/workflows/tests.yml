@@ -1,0 +1,58 @@
+# Runs the same suite as scripts/test.sh (all 7 modules, browser tours included)
+# inside the official odoo:19 image, against a throwaway PostgreSQL.
+name: tests
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  odoo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    container:
+      image: odoo:19
+      options: --user root
+    services:
+      db:
+        image: postgres:16
+        env:
+          POSTGRES_USER: odoo
+          POSTGRES_PASSWORD: odoo
+          POSTGRES_DB: postgres
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      MODULES: barcode_camera_ce,product_barcode_quick,stock_barcode_ce,stock_barcode_print_ce,sale_barcode_ce,purchase_barcode_ce,pos_barcode_ce
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Test dependencies (headless Chromium, CJK fonts)
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends chromium fonts-noto-cjk poppler-utils
+          pip3 install --no-cache-dir --break-system-packages rlPyCairo websocket-client polib \
+            || pip3 install --no-cache-dir rlPyCairo websocket-client polib
+
+      - name: Install modules and run tests
+        run: |
+          ODOO_ADDONS=$(python3 -c "import odoo.addons, os; print(os.path.dirname(odoo.addons.__file__))")
+          TAGS=$(echo "$MODULES" | sed 's/[^,]*/\/&/g')
+          odoo -d ci --db_host=db --db_user=odoo --db_password=odoo \
+               --addons-path="$ODOO_ADDONS,$GITHUB_WORKSPACE" \
+               -i "$MODULES,stock_account,product_expiry" --test-tags="$TAGS" \
+               --stop-after-init --log-level=test --http-port=8072 2>&1 | tee odoo-test.log
+          echo "---- summary"
+          grep -E "tests when loading|SUCCEEDED" odoo-test.log || true
+          if grep -qE " (ERROR|CRITICAL) " odoo-test.log; then
+            echo "::error::Test run reported errors"
+            grep -E " (ERROR|CRITICAL) |^FAIL:|^ERROR:" odoo-test.log | head -50
+            exit 1
+          fi
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: odoo-test-log
+          path: odoo-test.log

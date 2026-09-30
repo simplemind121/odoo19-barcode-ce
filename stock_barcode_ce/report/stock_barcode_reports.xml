@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_report_location_label_th40x30" model="ir.actions.report">
+        <field name="name">Location label 40x30 (thermal)</field>
+        <field name="model">stock.location</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_barcode_ce.report_location_label_th40x30</field>
+        <field name="report_file">stock_barcode_ce.report_location_label_th40x30</field>
+        <field name="paperformat_id" ref="product_barcode_quick.paperformat_th40x30"/>
+        <field name="binding_model_id" ref="stock.model_stock_location"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Location labels'</field>
+    </record>
+    <record id="action_report_location_label_th60x40" model="ir.actions.report">
+        <field name="name">Location label 60x40 (thermal)</field>
+        <field name="model">stock.location</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_barcode_ce.report_location_label_th60x40</field>
+        <field name="report_file">stock_barcode_ce.report_location_label_th60x40</field>
+        <field name="paperformat_id" ref="product_barcode_quick.paperformat_th60x40"/>
+        <field name="binding_model_id" ref="stock.model_stock_location"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Location labels'</field>
+    </record>
+    <record id="action_report_package_label_th60x40" model="ir.actions.report">
+        <field name="name">Package label 60x40 (thermal)</field>
+        <field name="model">stock.package</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_barcode_ce.report_package_label_th60x40</field>
+        <field name="report_file">stock_barcode_ce.report_package_label_th60x40</field>
+        <field name="paperformat_id" ref="product_barcode_quick.paperformat_th60x40"/>
+        <field name="binding_model_id" ref="stock.model_stock_package"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Package labels'</field>
+    </record>
+    <record id="action_report_barcode_commands" model="ir.actions.report">
+        <field name="name">Barcode commands sheet</field>
+        <field name="model">stock.picking.type</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">stock_barcode_ce.report_barcode_commands</field>
+        <field name="report_file">stock_barcode_ce.report_barcode_commands</field>
+        <field name="binding_model_id" ref="stock.model_stock_picking_type"/>
+        <field name="binding_type">report</field>
+        <field name="print_report_name">'Barcode commands'</field>
+    </record>
+</odoo>

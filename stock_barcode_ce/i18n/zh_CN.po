@@ -1,0 +1,1928 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_barcode_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 18:53+0000\n"
+"PO-Revision-Date: 2026-09-22 18:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(count)s line(s) packed in %(pack)s"
+msgstr "%(count)s 行已装入 %(pack)s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(count)s line(s) will be put in %(loc)s"
+msgstr "%(count)s 行将放入 %(loc)s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s %(done)s / %(demand)s"
+msgstr "%(product)s %(done)s / %(demand)s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: %(done)s scanned, more than the %(demand)s expected"
+msgstr "%(product)s：已扫 %(done)s，超过应收/发的 %(demand)s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%(product)s: %(qty)s counted in %(loc)s"
+msgstr "%(product)s：在 %(loc)s 盘点 %(qty)s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: only %(demand)s expected, you cannot scan more."
+msgstr "%(product)s：只需要 %(demand)s，不能再扫了。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: only %(demand)s expected."
+msgstr "%(product)s：只需要 %(demand)s。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%(qty)s %(uom)s of %(product)s scrapped (%(ref)s)"
+msgstr "%(product)s %(qty)s %(uom)s 已报废（%(ref)s）"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s count(s) applied"
+msgstr "已应用 %s 条盘点"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is a view location; scan a storable location."
+msgstr "%s 是视图库位，请扫描可存货的库位。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not a goods product."
+msgstr "%s 不是实物商品。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%s is not a stock location."
+msgstr "%s 不是库存库位。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not a valid location for this operation."
+msgstr "%s 不是本作业的有效库位。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not expected in this operation; it has been added."
+msgstr "%s 不在本作业中，已追加。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not part of this batch."
+msgstr "%s 不在本批次中。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not part of this operation."
+msgstr "%s 不在本作业中。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s is not tracked in inventory."
+msgstr "%s 不参与库存管理。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is tracked: scan its lot number."
+msgstr "%s 需追踪批次：请扫描批次号。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%s is tracked: scan its lot/serial number."
+msgstr "%s 需追踪：请扫描批次/序列号。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is tracked: scan its serial number."
+msgstr "%s 需追踪序列号：请扫描序列号。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s uncounted line(s) set to 0"
+msgstr "%s 条未盘点记录设为 0"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_barcode_commands
+msgid "'Barcode commands'"
+msgstr "'条码指令'"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_location_label_th40x30
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_location_label_th60x40
+msgid "'Location labels'"
+msgstr "'库位标签'"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_package_label_th60x40
+msgid "'Package labels'"
+msgstr "'包裹标签'"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_form_bcce
+msgid "<span class=\"o_stat_text\">Scan</span>"
+msgstr "<span class=\"o_stat_text\">扫码</span>"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "A serial number can only be counted once."
+msgstr "一个序列号只能盘点一次。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "A serial number line can only hold 1 unit."
+msgstr "序列号行只能是 1 个单位。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "A supervisor must confirm this transfer."
+msgstr "需要主管确认本单。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "A,B,C"
+msgstr "A,B,C"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_pack
+msgid "All scanned lines must be put in a pack before validation."
+msgstr "所有已扫行在验证前都必须装包。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Already done."
+msgstr "已完成。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Already recorded."
+msgstr "已记录过。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Apply"
+msgstr "应用"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Apply counts"
+msgstr "应用盘点"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Ask for this product"
+msgstr "申请建档"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Available:"
+msgstr "可用："
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Back"
+msgstr "返回"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Backorder:"
+msgstr "欠单："
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+#: model:ir.actions.client,name:stock_barcode_ce.action_stock_barcode_ce_main
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__barcode
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__barcode
+msgid "Barcode"
+msgstr "条码"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.report_barcode_commands
+msgid "Barcode commands"
+msgstr "条码指令"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_barcode_commands
+msgid "Barcode commands sheet"
+msgstr "条码指令表"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Barcode count"
+msgstr "扫码盘点"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_barcode_health
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_health
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_health
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Barcode data check"
+msgstr "条码数据体检"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_health_line
+msgid "Barcode data check line"
+msgstr "条码数据体检明细"
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_nomenclature
+msgid "Barcode nomenclatures"
+msgstr "条码规则"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Barcode rules"
+msgstr "扫码规则"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "Barcode rules read it as \"%s\": POS and scanners may not find the product"
+msgstr "条码规则会把它识别为「%s」：POS 和扫码可能找不到该商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_scan_log
+msgid "Barcode scan log"
+msgstr "扫码日志"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_scan_event
+msgid "Barcode scan quantity event"
+msgstr "扫码数量事件"
+
+#. module: stock_barcode_ce
+#: model:res.groups.privilege,name:stock_barcode_ce.res_groups_privilege_barcode
+msgid "Barcode scanner"
+msgstr "条码扫描"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__batch_id
+msgid "Batch"
+msgstr "批次调拨"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr "批量调拨"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Batch transfers"
+msgstr "批量调拨"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__bins
+msgid "Bins per level"
+msgstr "每层格数"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Bins to create"
+msgstr "将创建货位数"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__lot
+msgid "By lots"
+msgstr "按批次"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__serial
+msgid "By unique serial number"
+msgstr "按唯一序列号"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Camera"
+msgstr "摄像头"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Camera unavailable"
+msgstr "摄像头不可用"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__category
+msgid "Category"
+msgstr "类别"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "Check digit does not match"
+msgstr "校验位不匹配"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Clear scanned locations"
+msgstr "清除已扫库位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__scan_uuid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__client_uuid
+msgid "Client scan id"
+msgstr "客户端扫码编号"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_bin_generator__zones
+msgid "Comma separated zone codes, e.g. A,B,C"
+msgstr "逗号分隔的区域代码，例如 A,B,C"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__company_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_ce_config
+msgid "Configuration"
+msgstr "配置"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Count as on hand"
+msgstr "按现有数量计"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_clear
+msgid "Count removed"
+msgstr "已移除盘点"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_scan
+msgid "Count scan"
+msgstr "盘点扫码"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_set_qty
+msgid "Count typed"
+msgstr "盘点手填"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Counting in %s"
+msgstr "正在盘点 %s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Counting into package %s"
+msgstr "盘入包裹 %s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_apply
+msgid "Counts applied"
+msgstr "盘点已应用"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Counts are applied by a supervisor."
+msgstr "盘点结果由主管确认应用。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Create a backorder?"
+msgstr "创建欠单？"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Create backorder"
+msgstr "创建欠单"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Create product"
+msgstr "新建商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_product_barcode_quick
+msgid "Create product from barcode"
+msgstr "从条码新建商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Create return"
+msgstr "创建退货单"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_created
+msgid "Created by barcode"
+msgstr "扫码创建"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid ""
+"Creates zone, rack and level locations and one storable bin per position.\n"
+"                    Each bin gets a barcode made of the warehouse code and its position."
+msgstr ""
+"创建区域、货架、层级库位，并为每个位置创建一个可存货的格位。\n"
+"                    每个格位的条码由仓库代码和位置组成。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Date"
+msgstr "日期"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Day"
+msgstr "按天"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Delivery"
+msgstr "发货"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_dest_confirmed
+msgid "Destination scanned"
+msgstr "已扫目标库位"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Destination: %s"
+msgstr "目标：%s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__detail
+msgid "Detail"
+msgstr "详情"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__device
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__device
+msgid "Device"
+msgstr "设备"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__device
+msgid "Device identifier sent by the scanner client"
+msgstr "扫码客户端上报的设备标识"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Difference:"
+msgstr "差异："
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Discard"
+msgstr "放弃"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_res_users__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_resolver__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_batch__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_scrap__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__danger
+msgid "Error"
+msgstr "错误"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Errors"
+msgstr "错误"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid ""
+"Every product of this location that you did not count will be set to 0 when "
+"you apply."
+msgstr "本库位中你未盘点的商品，应用时都会设为 0。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_dest
+msgid "Every scanned line needs a scanned destination before validation."
+msgstr "每个已扫行在验证前都必须扫目标库位。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Everyone"
+msgstr "所有人"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Expired lots"
+msgstr "过期批次"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Expired lots in this transfer: %s"
+msgstr "本单含过期批次：%s"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid ""
+"Finds barcodes that will cause trouble when scanning: wrong check digits, codes the barcode\n"
+"                        rules read as weight/price/lot, codes used twice, products and storable locations without a barcode.\n"
+"                        Nothing is changed unless you press a button."
+msgstr ""
+"找出扫码时会出问题的条码：校验位错误、被条码规则识别成称重/价格/批次的码、重复使用的码、没有条码的商品和库位。\n"
+"                        只有点击按钮才会修改数据。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "First barcode"
+msgstr "首个条码"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Forced validations"
+msgstr "强制验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "From"
+msgstr "从"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "GS1 barcode read"
+msgstr "已读取 GS1 条码"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Generate"
+msgstr "生成"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid ""
+"Generate an in-store barcode for every product listed without a barcode?"
+msgstr "为列表中所有没有条码的商品生成店内条码？"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Generate in-store barcodes for products without one"
+msgstr "为没有条码的商品生成店内条码"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_bin_generator
+#: model:ir.model,name:stock_barcode_ce.model_stock_bin_generator
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_bin_generator
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_bin_generator_inventory
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Generate storage bins"
+msgstr "生成货位"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "Generated bins"
+msgstr "已生成的货位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__health_id
+msgid "Health"
+msgstr "体检"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_res_users__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_resolver__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_batch__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_quant__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_scrap__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__info
+msgid "Info"
+msgstr "提示"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Internal"
+msgstr "内部"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Inventory count"
+msgstr "库存盘点"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__kind
+msgid "Kind"
+msgstr "类型"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Late"
+msgstr "逾期"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__level
+msgid "Level"
+msgstr "级别"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__levels
+msgid "Levels per rack"
+msgstr "每架层数"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__line_ids
+msgid "Line"
+msgstr "行"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Line not found."
+msgstr "未找到该行。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__include_missing
+msgid "List products without barcode"
+msgstr "列出没有条码的商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__location_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__location_id
+msgid "Location"
+msgstr "库位"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_location_label_th40x30
+msgid "Location label 40x30 (thermal)"
+msgstr "库位标签 40x30（热敏）"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_location_label_th60x40
+msgid "Location label 60x40 (thermal)"
+msgstr "库位标签 60x40（热敏）"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Locations"
+msgstr "库位"
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_locations
+msgid "Locations and labels"
+msgstr "库位与标签"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Lot"
+msgstr "批次"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Lot %(lot)s belongs to %(product)s."
+msgstr "批次 %(lot)s 属于 %(product)s。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Lot %s"
+msgstr "批次 %s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__lot_name
+msgid "Lot/Serial"
+msgstr "批次/序列号"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Lot/serial %s does not exist for this product."
+msgstr "该商品不存在批次/序列号 %s。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Lot/serial for"
+msgstr "待扫批次/序列号："
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Main menu"
+msgstr "主菜单"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__home_scan
+msgid "Main menu scan"
+msgstr "主菜单扫码"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Main stock (scan a location to change)"
+msgstr "默认库位（扫库位可更改）"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__message
+msgid "Message"
+msgstr "消息"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__migrated
+msgid "Migrated from version 1"
+msgstr "从 1.x 版本迁移"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Mine"
+msgstr "我的"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "More"
+msgstr "更多"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__move_line_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__move_line_id
+msgid "Move Line"
+msgstr "移动明细"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__transfer
+msgid "Moved to another line"
+msgstr "转到其他行"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "New"
+msgstr "新建"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "No backorder"
+msgstr "不创建欠单"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "No barcode"
+msgstr "无条码"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"No batch in progress. Create batches from Inventory, then scan them here."
+msgstr "没有进行中的批次。请在库存中创建批次后到这里扫码。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "No problem found."
+msgstr "未发现问题。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__none
+msgid "No tracking"
+msgstr "不追踪"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "No transfer, operation type, location or product found for %s"
+msgstr "没有找到 %s 对应的单据、作业类型、库位或商品"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking_type.py:0
+msgid "No warehouse"
+msgstr "无仓库"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Not counted yet in this location"
+msgstr "本库位尚未盘点"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Not validated"
+msgstr "未验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Nothing counted yet."
+msgstr "还没有盘点。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Nothing has been counted yet."
+msgstr "还没有任何盘点。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Nothing has been scanned yet."
+msgstr "还没有扫描任何商品。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Nothing has been scanned. Validate all the reserved quantities?"
+msgstr "尚未扫描任何商品。按预留数量全部验证吗？"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Nothing left to return on %s."
+msgstr "%s 没有可退的内容。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Nothing scanned"
+msgstr "未扫描"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Nothing to pack: scan products first."
+msgstr "没有可装包的：请先扫描商品。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Nothing to process. Tap New to start one."
+msgstr "没有待处理的单据。点「新建」开始。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__success
+msgid "OK"
+msgstr "正常"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Offline:"
+msgstr "离线："
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__old_quantity
+msgid "Old Quantity"
+msgstr "原数量"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "On hand:"
+msgstr "库存："
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Only %(qty)s %(uom)s of %(product)s available in %(loc)s."
+msgstr "%(loc)s 中 %(product)s 只有 %(qty)s %(uom)s。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/barcode_security.py:0
+msgid "Only a barcode supervisor can %s."
+msgstr "只有扫码主管可以%s。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Only a barcode supervisor can set uncounted products to zero."
+msgstr "只有扫码主管可以把未盘点商品设为 0。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Only a barcode supervisor can validate expired lots."
+msgstr "只有扫码主管可以验证含过期批次的单据。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Only done transfers can be returned."
+msgstr "只有已完成的单据可以退货。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Open form"
+msgstr "打开表单"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Opening %s"
+msgstr "正在打开 %s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__operation
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Operation"
+msgstr "操作"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Operations"
+msgstr "作业"
+
+#. module: stock_barcode_ce
+#: model:res.groups,name:stock_barcode_ce.group_barcode_operator
+msgid "Operator"
+msgstr "扫码员"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_scan_only
+msgid ""
+"Operators cannot type quantities, add products by hand or validate unscanned"
+" transfers. Supervisors can."
+msgstr "扫码员不能手填数量、手动添加商品或验证未扫描的单据；主管可以。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Pack"
+msgstr "装包"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"Package %(pack)s contains %(product)s which is not part of this operation."
+msgstr "包裹 %(pack)s 中的 %(product)s 不属于本作业。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Package %s counted as complete"
+msgstr "包裹 %s 已按整包盘点"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__package_name
+msgid "Package Name"
+msgstr "包裹名称"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_package_label_th60x40
+msgid "Package label 60x40 (thermal)"
+msgstr "包裹标签 60x40（热敏）"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Packing into %s"
+msgstr "装入包裹 %s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__parent_location_id
+msgid "Parent location"
+msgstr "上级库位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__picking_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__picking_id
+msgid "Picking"
+msgstr "调拨单"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking_type
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__picking_type_id
+msgid "Picking Type"
+msgstr "作业类型"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Picking from %s"
+msgstr "从 %s 拣货"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__preview
+msgid "Preview"
+msgstr "预览"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print delivery slip"
+msgstr "打印送货单"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Print labels"
+msgstr "打印标签"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print operations"
+msgstr "打印作业单"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print product labels"
+msgstr "打印商品标签"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Printing delivery slip"
+msgstr "正在打印送货单"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Printing operations"
+msgstr "正在打印作业单"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__product_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__product_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__product_id
+msgid "Product"
+msgstr "商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr "库存移动明细"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__add_product
+msgid "Product added manually"
+msgstr "手动添加商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__missing
+msgid "Product without barcode"
+msgstr "没有条码的商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Products"
+msgstr "商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_source
+msgid ""
+"Products can only be scanned after their source location (deliveries, "
+"internal transfers)."
+msgstr "必须先扫源库位才能扫商品（发货、内部调拨）。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__pack
+msgid "Put in pack"
+msgstr "装包"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Put these products in a pack before validating: %s"
+msgstr "验证前请先把这些商品装包：%s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__qty
+msgid "Qty"
+msgstr "数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__quant_id
+msgid "Quant"
+msgstr "库存记录"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Quantities"
+msgstr "数量"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__quantity
+msgid "Quantity"
+msgstr "数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__quantity
+msgid "Quantity added or set by this action"
+msgstr "本次操作增加或设定的数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__set_qty
+msgid "Quantity typed"
+msgstr "手填数量"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Quantity updated"
+msgstr "数量已更新"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_quant
+msgid "Quants"
+msgstr "库存数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__racks
+msgid "Racks per zone"
+msgstr "每区货架数"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__nomenclature
+msgid "Read as something else by the barcode rules"
+msgstr "被条码规则识别成其他类型"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Ready"
+msgstr "就绪"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Reason"
+msgstr "原因"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Receipt"
+msgstr "收货"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__resolved_type
+msgid "Recognized as"
+msgstr "识别为"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Remove count"
+msgstr "移除盘点"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Return %s created"
+msgstr "已创建退货单 %s"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid ""
+"Rules applied in the Barcode app to scanner operators. Barcode supervisors "
+"and inventory users can override \"no typed quantities\"."
+msgstr "扫码应用中对扫码员生效的规则。扫码主管和库存用户可以越过「禁止手填数量」。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Run check"
+msgstr "开始体检"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__duplicate
+msgid "Same code used twice"
+msgstr "同一个码被重复使用"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__scan
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__scan
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_picking_batch_form_bcce
+msgid "Scan"
+msgstr "扫码"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Scan a location first."
+msgstr "请先扫描库位。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a location, then the products it holds."
+msgstr "扫描库位，再扫描库位内的商品。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a product"
+msgstr "扫描商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a product to start."
+msgstr "扫描商品开始。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"Scan a transfer, an operation type, a location or a product, or pick a task "
+"below."
+msgstr "扫描单据、作业类型、库位或商品，或选择下方任务。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Scan context cleared."
+msgstr "已清除扫描上下文。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_event_ids
+msgid "Scan events"
+msgstr "扫码事件"
+
+#. module: stock_barcode_ce
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_barcode_scan_log
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_scan_log
+msgid "Scan log"
+msgstr "扫码日志"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_scan_log.py:0
+msgid "Scan logs cannot be modified."
+msgstr "扫码日志不能修改。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan lots/serials for tracked products."
+msgstr "追踪商品请扫描批次/序列号。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan or type a barcode"
+msgstr "扫描或输入条码"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan the destination location of: %s"
+msgstr "请扫描以下商品的目标库位：%s"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"Scan the location (optional), the product and its lot, then enter the "
+"quantity."
+msgstr "扫库位（可选）、扫商品及批次，再填数量。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scan the lot/serial number to scrap."
+msgstr "请扫描要报废的批次/序列号。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scan the product to scrap."
+msgstr "请扫描要报废的商品。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan the source location first."
+msgstr "请先扫描源库位。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.report_barcode_commands
+msgid "Scan these codes in the Barcode app instead of tapping the buttons."
+msgstr "在条码应用中扫描这些码代替点击按钮。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_dest
+msgid "Scan: destination location required"
+msgstr "扫码：必须扫目标库位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_scan_only
+msgid "Scan: no typed quantities"
+msgstr "扫码：禁止手填数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_pack
+msgid "Scan: packing required"
+msgstr "扫码：必须装包"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_block_extra
+msgid "Scan: refuse products not in the transfer"
+msgstr "扫码：拒绝单据外商品"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_block_over
+msgid "Scan: refuse quantities above demand"
+msgstr "扫码：拒绝超出需求数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_source
+msgid "Scan: source location required"
+msgstr "扫码：必须扫源库位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_qty
+msgid "Scanned Quantity"
+msgstr "已扫数量"
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_ce_main
+msgid "Scanner"
+msgstr "扫码作业"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scans refused after reconnecting"
+msgstr "恢复网络后被拒绝的扫码"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__schema_version
+msgid "Schema Version"
+msgstr "数据格式版本"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/scrap.js:0
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model,name:stock_barcode_ce.model_stock_scrap
+msgid "Scrap"
+msgstr "报废"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/scrap.js:0
+msgid "Scrap %(qty)s x %(product)s? This removes it from stock."
+msgstr "报废 %(qty)s 件 %(product)s？将从库存中扣除。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scrap from %s"
+msgstr "从 %s 报废"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scrapped %s"
+msgstr "已报废 %s"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Search a product"
+msgstr "搜索商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Search reference, origin or partner"
+msgstr "搜索单号、来源单据或伙伴"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__separator
+msgid "Separator"
+msgstr "分隔符"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Serial"
+msgstr "序列号"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Serial number %s has already been counted."
+msgstr "序列号 %s 已经盘点过。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Serial number %s has already been scanned."
+msgstr "序列号 %s 已经扫描过。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Set to zero"
+msgstr "设为 0"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Set uncounted to zero"
+msgstr "未盘点设为 0"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Several products use lot %s: scan the product first."
+msgstr "多个商品使用批次 %s：请先扫描商品。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"Some products were not fully processed. Create a backorder for the rest?"
+msgstr "部分商品未处理完。剩余部分要创建欠单吗？"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_resolver
+msgid "Stock barcode resolver"
+msgstr "库存条码解析器"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__location_missing
+msgid "Storable location without barcode"
+msgstr "没有条码的可存货库位"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_move_line__bc_qty
+msgid ""
+"Sum of the scan events of this line. Writing it records the difference as a "
+"new event."
+msgstr "本行扫码事件的合计。写入该字段会把差额记为一条新事件。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__summary
+msgid "Summary"
+msgstr "汇总"
+
+#. module: stock_barcode_ce
+#: model:res.groups,name:stock_barcode_ce.group_barcode_supervisor
+msgid "Supervisor"
+msgstr "扫码主管"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "That would create %s bins; generate them in smaller chunks (max 5000)."
+msgstr "这将创建 %s 个货位；请分批生成（每次最多 5000）。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This is an operation type barcode."
+msgstr "这是作业类型条码。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"This operation must be scanned: adding products by hand is not allowed."
+msgstr "本作业必须扫码：不允许手动添加商品。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This operation must be scanned: typing quantities is not allowed."
+msgstr "本作业必须扫码：不允许手填数量。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This transfer is already done."
+msgstr "该单据已完成。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "This transfer is done."
+msgstr "本单已完成。"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_list
+msgid "Time"
+msgstr "时间"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "To"
+msgstr "到"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Today"
+msgstr "今天"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__total
+msgid "Total"
+msgstr "合计"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__is_storable
+msgid "Track Inventory"
+msgstr "追踪库存"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__tracking
+msgid "Tracking"
+msgstr "追踪方式"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Typed quantities"
+msgstr "手填数量"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__manual
+msgid "Typed quantity"
+msgstr "手填数量"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Uncounted = 0"
+msgstr "未盘=0"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_zero
+msgid "Uncounted set to zero"
+msgstr "未盘点设为 0"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__client_uuid
+msgid ""
+"Unique id generated by the scanner for each scan; a scan re-sent after a "
+"network failure is recognized and not counted twice."
+msgstr "扫码端为每次扫码生成的唯一编号；断网后重发的扫码会被识别，不会重复计数。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Unknown barcode: %s"
+msgstr "未知条码：%s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Unknown command %s"
+msgstr "未知指令 %s"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Unknown product"
+msgstr "未知商品"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Unknown product GTIN %s"
+msgstr "未知商品 GTIN %s"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Update the stock of %s counted line(s)?"
+msgstr "更新 %s 条盘点记录的库存？"
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_res_users
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__user_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__user_id
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "User"
+msgstr "用户"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__validate
+msgid "Validate"
+msgstr "验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validate all"
+msgstr "全部验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validate anyway"
+msgstr "仍然验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validated"
+msgstr "已验证"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Waiting"
+msgstr "等待中"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__warehouse_id
+msgid "Warehouse"
+msgstr "仓库"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__warning
+msgid "Warning"
+msgstr "警告"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Wave transfers"
+msgstr "波次调拨"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__package
+msgid "Whole package"
+msgstr "整包"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Whole package %s scanned"
+msgstr "已扫描整包 %s"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__invalid_digit
+msgid "Wrong EAN/UPC check digit"
+msgstr "EAN/UPC 校验位错误"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "You are already in %s."
+msgstr "你已在 %s 中。"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/barcode_security.py:0
+msgid "You are not allowed to use the barcode scanner."
+msgstr "你没有使用扫码功能的权限。"
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__zones
+msgid "Zones"
+msgstr "区域"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "Zones, racks, levels and bins must all be set."
+msgstr "区域、货架、层数和格数都必须填写。"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "also working on this transfer"
+msgstr "也在处理这张单"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "apply inventory counts"
+msgstr "应用盘点结果"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "counted"
+msgstr "条已盘"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "id"
+msgstr "id"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "late"
+msgstr "逾期"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "not recognized offline)"
+msgstr "条离线时未识别)"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "product(s)"
+msgstr "个商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "s)"
+msgstr "秒)"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "scan(s) waiting to sync"
+msgstr "条扫码待同步"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "scrap products"
+msgstr "报废商品"
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "transfer(s)"
+msgstr "张单据"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "validate quantities that were not scanned"
+msgstr "验证未扫描的数量"

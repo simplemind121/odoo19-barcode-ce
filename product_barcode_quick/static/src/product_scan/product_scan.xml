@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="product_barcode_quick.ProductScan">
+        <div class="o_bcq_scan o_action h-100 overflow-auto">
+            <div class="o_bcq_inner container py-3">
+                <div class="o_bcq_prompt d-flex flex-column flex-md-row align-items-md-center gap-2 mb-3">
+                    <div class="flex-grow-1">
+                        <h2 class="mb-0">Scan a product</h2>
+                        <div class="text-muted">Use a scanner, the camera, or type the code. Unknown codes open a new product form.</div>
+                    </div>
+                    <button t-if="barcodeCamera.isSupported()" class="btn btn-primary btn-lg o_bcq_camera" t-on-click="openCamera">
+                        <i class="fa fa-camera me-2"/>Camera
+                    </button>
+                </div>
+                <form class="d-flex gap-2 mb-3" t-on-submit="submitManual">
+                    <input class="form-control form-control-lg o_bcq_input" t-model="state.manual"
+                        placeholder="Barcode" autocomplete="off" inputmode="numeric"/>
+                    <button class="btn btn-secondary btn-lg o_bcq_search" type="submit">Search</button>
+                </form>
+
+                <t t-set="res" t-value="state.result"/>
+                <div t-if="res and res.found" class="o_bcq_card card mb-3">
+                    <div class="card-body d-flex gap-3">
+                        <img t-attf-src="/web/image/product.product/{{res.product.id}}/image_256?unique={{res.product.write_date}}"
+                             class="o_bcq_img rounded" alt=""/>
+                        <div class="flex-grow-1 min-w-0">
+                            <h3 class="o_bcq_name mb-1" t-esc="res.product.display_name"/>
+                            <div class="o_bcq_meta text-muted small">
+                                <span t-esc="res.product.barcode"/>
+                                <t t-if="res.product.default_code"> / <span t-esc="res.product.default_code"/></t>
+                                / <span t-esc="res.product.categ"/>
+                            </div>
+                            <div class="d-flex align-items-baseline gap-3 mt-2">
+                                <span class="o_bcq_price" t-esc="formatPrice(res.product)"/>
+                                <span t-if="res.product.qty_available !== undefined" class="o_bcq_qty">
+                                    On hand: <strong t-esc="res.product.qty_available"/> <t t-esc="res.product.uom"/>
+                                </span>
+                                <span t-if="res.qty" class="badge text-bg-info">Qty in code: <t t-esc="res.qty"/></span>
+                            </div>
+                            <div class="d-flex gap-2 mt-3">
+                                <button class="btn btn-secondary o_bcq_open" t-on-click="openProduct">Open product</button>
+                                <button class="btn btn-secondary o_bcq_print" t-on-click="printLabel"><i class="fa fa-print me-1"/>Print label</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div t-elif="res" class="o_bcq_unknown alert alert-warning d-flex align-items-center gap-3">
+                    <div class="flex-grow-1">
+                        <strong>No product with code <t t-esc="res.barcode"/></strong>
+                        <div t-if="res.gtin_like and !res.gtin_valid" class="small">The check digit is wrong; the code may have been misread.</div>
+                    </div>
+                    <button class="btn btn-primary o_bcq_create" t-on-click="() => this.createProduct(res.barcode)">Create product</button>
+                </div>
+
+                <div t-if="state.history.length" class="o_bcq_history">
+                    <h5 class="text-muted">Recent scans</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li t-foreach="state.history" t-as="h" t-key="h_index" class="d-flex gap-2 py-1 border-bottom">
+                            <span class="o_bcq_hcode" t-esc="h.code"/>
+                            <span t-if="h.found" t-esc="h.name" class="text-truncate"/>
+                            <span t-else="" class="text-warning">unknown</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

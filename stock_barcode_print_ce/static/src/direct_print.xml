@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="stock_barcode_print_ce.Operation" t-inherit="stock_barcode_ce.Operation" t-inherit-mode="extension">
+        <xpath expr="//div[hasclass('o_bcce_menu')]" position="inside">
+            <div class="dropdown-divider"/>
+            <button class="dropdown-item o_bcce_dp_products" t-on-click="() => this.directPrint('products')"><i class="fa fa-tags me-2"/>Label printer: product labels</button>
+            <button t-if="d.show_lots" class="dropdown-item o_bcce_dp_lots" t-on-click="() => this.directPrint('lots')"><i class="fa fa-barcode me-2"/>Label printer: lot/serial labels</button>
+            <button t-if="d.use_packages" class="dropdown-item o_bcce_dp_packs" t-on-click="() => this.directPrint('packages')"><i class="fa fa-archive me-2"/>Label printer: package labels</button>
+        </xpath>
+    </t>
+</templates>

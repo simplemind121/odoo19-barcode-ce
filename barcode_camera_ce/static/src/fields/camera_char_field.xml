@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="barcode_camera_ce.CameraCharField">
+        <div class="d-flex align-items-center gap-1 w-100 o_bcce_char">
+            <div class="flex-grow-1"><t t-call="web.CharField"/></div>
+            <button t-if="!props.readonly and barcodeCamera.isSupported()" type="button"
+                class="btn btn-link px-1 o_bcce_char_btn" t-on-click="scan" title="Scan with camera">
+                <i class="fa fa-camera"/>
+            </button>
+        </div>
+    </t>
+</templates>

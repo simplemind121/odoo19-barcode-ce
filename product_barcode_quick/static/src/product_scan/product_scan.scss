@@ -1,0 +1,8 @@
+.o_bcq_scan {
+    background: $o-webclient-background-color;
+    .o_bcq_inner { max-width: 760px; }
+    .o_bcq_img { width: 96px; height: 96px; object-fit: contain; background: #fff; }
+    .o_bcq_price { font-size: 1.8rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+    .o_bcq_hcode, .o_bcq_meta { font-variant-numeric: tabular-nums; }
+    .o_bcq_hcode { min-width: 9.5em; }
+}

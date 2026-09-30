@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="stock_barcode_ce.Main">
+        <div class="o_bcce_app o_action d-flex flex-column h-100">
+            <div class="o_bcce_scanbar d-flex align-items-center gap-2 px-2 py-2">
+                <button t-if="state.view !== 'home'" class="btn btn-link o_bcce_nav o_bcce_back" t-on-click="back" title="Back">
+                    <i class="fa fa-chevron-left"/>
+                </button>
+                <button class="btn btn-link o_bcce_nav o_bcce_home" t-on-click="home" title="Main menu">
+                    <i class="fa fa-home"/>
+                </button>
+                <form class="flex-grow-1 d-flex" t-on-submit="submitManual">
+                    <input class="form-control o_bcce_scan_input" t-model="state.manual"
+                        placeholder="Scan or type a barcode" autocomplete="off"/>
+                </form>
+                <button t-if="barcodeCamera.isSupported()" class="btn o_bcce_cam_btn"
+                    t-att-class="state.camera ? 'btn-warning' : 'btn-light'" t-on-click="toggleCamera" title="Camera">
+                    <i class="fa fa-camera"/>
+                </button>
+            </div>
+            <div t-if="state.camera" class="o_bcce_camera">
+                <BarcodeVideoScanner facingMode="'environment'" delayBetweenScan="1200"
+                    onResult.bind="onCameraResult" onError.bind="onCameraError" cssClass="'w-100 h-100'"/>
+            </div>
+            <div class="o_bcce_body flex-grow-1 overflow-auto">
+                <t t-if="state.view === 'home'" t-call="stock_barcode_ce.Home"/>
+                <t t-elif="state.view === 'types'" t-call="stock_barcode_ce.Types"/>
+                <t t-elif="state.view === 'pickings'" t-call="stock_barcode_ce.Pickings"/>
+                <t t-elif="state.view === 'batches'" t-call="stock_barcode_ce.Batches"/>
+                <t t-elif="state.view === 'operation'">
+                    <Operation t-key="state.params.model + state.params.id" model="state.params.model" id="state.params.id"
+                        registerScanHandler.bind="registerScanHandler" onBack.bind="back" onHome.bind="home"
+                        openRecord.bind="openRecord"/>
+                </t>
+                <t t-elif="state.view === 'scrap'">
+                    <ScrapScreen registerScanHandler.bind="registerScanHandler" onBack.bind="back"/>
+                </t>
+                <t t-elif="state.view === 'inventory'">
+                    <InventoryCount t-key="'inv' + (state.params.locationId || 0)" locationId="state.params.locationId || false"
+                        registerScanHandler.bind="registerScanHandler" onBack.bind="back"/>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Home">
+        <div class="o_bcce_home container py-3">
+            <p class="o_bcce_hint">Scan a transfer, an operation type, a location or a product, or pick a task below.</p>
+            <div t-if="state.homeMessage" class="alert alert-danger py-2 o_bcce_home_msg" t-esc="state.homeMessage"/>
+            <div class="o_bcce_tiles">
+                <button class="o_bcce_tile o_bcce_tile_ops" t-on-click="() => this.go('types')">
+                    <i class="fa fa-truck"/><span>Operations</span>
+                </button>
+                <button class="o_bcce_tile o_bcce_tile_inv" t-on-click="() => this.go('inventory', {})">
+                    <i class="fa fa-cubes"/><span>Inventory count</span>
+                    <small t-if="state.dashboard and state.dashboard.counted_count" class="o_bcce_tile_badge">
+                        <t t-esc="state.dashboard.counted_count"/> counted
+                    </small>
+                </button>
+                <button class="o_bcce_tile o_bcce_tile_batch" t-on-click="() => this.go('batches', {isWave: false})">
+                    <i class="fa fa-th-list"/><span>Batch transfers</span>
+                    <small t-if="state.dashboard and state.dashboard.batch_count" class="o_bcce_tile_badge"><t t-esc="state.dashboard.batch_count"/></small>
+                </button>
+                <button class="o_bcce_tile o_bcce_tile_wave" t-on-click="() => this.go('batches', {isWave: true})">
+                    <i class="fa fa-random"/><span>Wave transfers</span>
+                    <small t-if="state.dashboard and state.dashboard.wave_count" class="o_bcce_tile_badge"><t t-esc="state.dashboard.wave_count"/></small>
+                </button>
+                <button t-if="state.dashboard and state.dashboard.is_supervisor" class="o_bcce_tile o_bcce_tile_scrap" t-on-click="() => this.go('scrap', {})">
+                    <i class="fa fa-trash"/><span>Scrap</span>
+                </button>
+                <button class="o_bcce_tile o_bcce_tile_product" t-on-click="openProductLookup">
+                    <i class="fa fa-tag"/><span>Products</span>
+                </button>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Types">
+        <div class="o_bcce_types container py-3">
+            <t t-if="state.dashboard">
+                <section t-foreach="state.dashboard.warehouses" t-as="wh" t-key="wh.id" class="mb-4">
+                    <h4 class="o_bcce_wh"><t t-esc="wh.name"/> <small t-if="wh.code" class="text-muted" t-esc="wh.code"/></h4>
+                    <div class="list-group">
+                        <button t-foreach="wh.types" t-as="type" t-key="type.id"
+                            class="list-group-item list-group-item-action d-flex align-items-center gap-3 o_bcce_type"
+                            t-on-click="() => this.openType(type)">
+                            <i t-attf-class="fa fa-fw {{codeIcons[type.code]}} o_bcce_type_icon"/>
+                            <span class="flex-grow-1 text-start" t-esc="type.name"/>
+                            <span t-if="type.late" class="badge text-bg-danger" title="Late"><t t-esc="type.late"/> late</span>
+                            <span t-if="type.waiting" class="badge text-bg-secondary" title="Waiting"><t t-esc="type.waiting"/></span>
+                            <span class="badge text-bg-primary o_bcce_ready" title="Ready"><t t-esc="type.ready"/></span>
+                        </button>
+                    </div>
+                </section>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Pickings">
+        <div class="o_bcce_pickings container py-3" t-if="state.pickingList">
+            <div class="d-flex align-items-center gap-2 mb-3">
+                <h3 class="flex-grow-1 mb-0" t-esc="state.pickingList.type.name"/>
+                <button class="btn btn-primary o_bcce_new" t-on-click="newPicking"><i class="fa fa-plus me-1"/>New</button>
+            </div>
+            <input class="form-control mb-3 o_bcce_search" placeholder="Search reference, origin or partner"
+                t-model="state.search" t-on-change="loadPickings"/>
+            <div t-if="!state.pickingList.pickings.length" class="text-muted py-4 text-center">
+                Nothing to process. Tap New to start one.
+            </div>
+            <div class="list-group">
+                <button t-foreach="state.pickingList.pickings" t-as="p" t-key="p.id"
+                    class="list-group-item list-group-item-action o_bcce_picking_row" t-on-click="() => this.openPicking(p.id)">
+                    <div class="d-flex justify-content-between">
+                        <strong class="o_bcce_ref" t-esc="p.name"/>
+                        <span class="badge" t-att-class="p.state === 'assigned' ? 'text-bg-success' : 'text-bg-secondary'" t-esc="p.state_label"/>
+                    </div>
+                    <div class="small text-muted d-flex gap-2 flex-wrap">
+                        <span t-if="p.partner" t-esc="p.partner"/>
+                        <span t-if="p.origin" t-esc="p.origin"/>
+                        <span t-att-class="p.late ? 'text-danger' : ''" t-esc="p.scheduled_date"/>
+                        <span><t t-esc="p.lines"/> product(s)</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Batches">
+        <div class="o_bcce_batches container py-3">
+            <h3 t-if="state.params.isWave">Wave transfers</h3>
+            <h3 t-else="">Batch transfers</h3>
+            <div t-if="state.batches and !state.batches.length" class="text-muted py-4 text-center">
+                No batch in progress. Create batches from Inventory, then scan them here.
+            </div>
+            <div class="list-group">
+                <button t-foreach="state.batches or []" t-as="b" t-key="b.id"
+                    class="list-group-item list-group-item-action o_bcce_batch_row" t-on-click="() => this.openBatch(b.id)">
+                    <div class="d-flex justify-content-between">
+                        <strong t-esc="b.name"/>
+                        <span class="text-muted small"><t t-esc="b.count"/> transfer(s)</span>
+                    </div>
+                    <div class="small text-muted"><t t-esc="b.picking_type"/> <t t-if="b.user"> / <t t-esc="b.user"/></t></div>
+                </button>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Operation">
+        <div class="o_bcce_operation d-flex flex-column h-100" t-if="state.data">
+            <t t-set="d" t-value="state.data"/>
+            <header class="o_bcce_op_header px-3 py-2">
+                <div class="d-flex align-items-center gap-2">
+                    <div class="flex-grow-1 min-w-0">
+                        <div class="o_bcce_op_name text-truncate" t-esc="d.name"/>
+                        <div class="o_bcce_op_sub small text-truncate">
+                            <t t-esc="d.picking_type"/><t t-if="d.partner"> / <t t-esc="d.partner"/></t>
+                            <t t-if="d.origin"> / <t t-esc="d.origin"/></t>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn btn-link o_bcce_menu_btn" t-on-click="() => this.state.menu = !this.state.menu" title="More">
+                            <i class="fa fa-ellipsis-v"/>
+                        </button>
+                        <div t-if="state.menu" class="dropdown-menu dropdown-menu-end show o_bcce_menu">
+                            <button class="dropdown-item" t-on-click="() => this.print('operations')"><i class="fa fa-print me-2"/>Print operations</button>
+                            <button t-if="d.code === 'outgoing'" class="dropdown-item" t-on-click="() => this.print('delivery')"><i class="fa fa-print me-2"/>Print delivery slip</button>
+                            <button class="dropdown-item" t-on-click="() => this.print('labels')"><i class="fa fa-tags me-2"/>Print product labels</button>
+                            <button t-if="d.use_packages" class="dropdown-item o_bcce_pack_menu" t-on-click="putInPack"><i class="fa fa-archive me-2"/>Put in pack</button>
+                            <button class="dropdown-item" t-on-click="clearContext"><i class="fa fa-eraser me-2"/>Clear scanned locations</button>
+                            <button class="dropdown-item" t-on-click="openInBackend"><i class="fa fa-external-link me-2"/>Open form</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="o_bcce_route small mt-1" t-if="d.location">
+                    <i class="fa fa-map-marker me-1"/><t t-esc="d.location.name"/>
+                    <i class="fa fa-long-arrow-right mx-1"/><t t-esc="d.location_dest.name"/>
+                </div>
+                <div class="progress o_bcce_progress mt-2" role="progressbar">
+                    <div class="progress-bar" t-attf-style="width: {{progress}}%"/>
+                </div>
+            </header>
+
+            <div class="o_bcce_ctx d-flex flex-wrap gap-1 px-3 pt-2" t-if="state.ctx.source_location_name or state.ctx.dest_location_name or state.ctx.result_package_name or state.ctx.pending_product_name">
+                <span t-if="state.ctx.source_location_name" class="o_bcce_chip o_bcce_chip_src"><i class="fa fa-sign-out me-1"/>From <t t-esc="state.ctx.source_location_name"/></span>
+                <span t-if="state.ctx.dest_location_name" class="o_bcce_chip o_bcce_chip_dest"><i class="fa fa-sign-in me-1"/>To <t t-esc="state.ctx.dest_location_name"/></span>
+                <span t-if="state.ctx.result_package_name" class="o_bcce_chip o_bcce_chip_pack"><i class="fa fa-archive me-1"/><t t-esc="state.ctx.result_package_name"/></span>
+                <span t-if="state.ctx.pending_product_name" class="o_bcce_chip o_bcce_chip_lot"><i class="fa fa-barcode me-1"/>Lot/serial for <t t-esc="state.ctx.pending_product_name"/></span>
+            </div>
+
+            <div t-if="state.offline or state.pending.length" class="o_bcce_sync mx-3 mt-2" t-att-class="state.offline ? 'o_bcce_sync_offline' : ''">
+                <i t-attf-class="fa {{state.offline ? 'fa-wifi' : 'fa-refresh fa-spin'}} me-2"/>
+                <t t-if="state.offline">Offline: </t>
+                <span class="o_bcce_pending_count" t-esc="state.pending.length"/> scan(s) waiting to sync
+                <t t-if="state.offline and offlineAdds.unknown"> (<t t-esc="offlineAdds.unknown"/> not recognized offline)</t>
+            </div>
+            <div t-if="state.rejected.length" class="o_bcce_rejected mx-3 mt-2">
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong>Scans refused after reconnecting</strong>
+                    <button class="btn btn-sm btn-light o_bcce_rejected_ok" t-on-click="dismissRejected">OK</button>
+                </div>
+                <div t-foreach="state.rejected" t-as="r" t-key="r_index" class="small">
+                    <span class="o_bcce_rej_code" t-esc="r.code"/>: <t t-esc="r.message"/>
+                </div>
+            </div>
+            <div t-if="d.presence and d.presence.length" class="o_bcce_presence mx-3 mt-2 small">
+                <i class="fa fa-users me-1"/>
+                <t t-foreach="d.presence" t-as="p" t-key="p_index">
+                    <strong t-esc="p.user"/> <span class="text-muted">(<t t-esc="p.seconds"/>s)</span><t t-if="!p_last">, </t>
+                </t>
+                also working on this transfer
+            </div>
+
+            <div t-if="feedback and feedback.message" class="o_bcce_feedback mx-3 mt-2" t-attf-class="o_bcce_fb_{{feedback.level}}">
+                <span t-esc="feedback.message"/>
+                <t t-if="feedback.unknown_barcode">
+                    <button t-if="d.can_create_product" class="btn btn-sm btn-light ms-2 o_bcce_create_product"
+                        t-on-click="() => this.createProduct(feedback.unknown_barcode)">Create product</button>
+                    <button t-else="" class="btn btn-sm btn-light ms-2 o_bcce_request_product"
+                        t-on-click="() => this.requestProduct(feedback.unknown_barcode)">Ask for this product</button>
+                </t>
+            </div>
+
+            <div t-if="state.done" class="o_bcce_done m-3 p-3">
+                <h3><i class="fa fa-check-circle me-2"/><t t-esc="state.done.message"/></h3>
+                <div t-if="state.done.backorders and state.done.backorders.length" class="mb-2">
+                    Backorder: <t t-foreach="state.done.backorders" t-as="bo" t-key="bo.id"><strong t-esc="bo.name"/> </t>
+                </div>
+                <div class="d-flex flex-wrap gap-2">
+                    <button t-foreach="state.done.next_actions or []" t-as="na" t-key="na_index" class="btn btn-primary o_bcce_next_action"
+                        t-on-click="() => this.runNextAction(na)" t-esc="na.label"/>
+                    <button t-if="props.model === 'stock.picking'" class="btn btn-secondary o_bcce_return" t-on-click="createReturn">Create return</button>
+                    <button class="btn btn-secondary o_bcce_done_back" t-on-click="() => this.props.onBack()">Back</button>
+                </div>
+            </div>
+
+            <div class="o_bcce_lines flex-grow-1 px-3 py-2">
+                <div t-if="!d.moves.length" class="text-muted text-center py-5">Scan a product to start.</div>
+                <div t-foreach="d.moves" t-as="move" t-key="move.move_id" class="o_bcce_move" t-att-class="moveClass(move)">
+                    <div class="d-flex align-items-start gap-2">
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="o_bcce_product text-truncate" t-esc="move.product"/>
+                            <div class="o_bcce_codes small">
+                                <span t-if="move.barcode" t-esc="move.barcode"/>
+                                <span t-if="move.default_code"> / <t t-esc="move.default_code"/></span>
+                                <span t-if="d.is_batch" class="ms-1 badge text-bg-light" t-esc="move.picking"/>
+                                <span t-if="move.tracking !== 'none'" class="ms-1 badge text-bg-info">
+                                    <t t-if="move.tracking === 'serial'">Serial</t><t t-else="">Lot</t>
+                                </span>
+                            </div>
+                        </div>
+                        <t t-if="state.editing and state.editing.kind === 'move' and state.editing.id === move.move_id">
+                            <form class="d-flex gap-1 o_bcce_qty_form" t-on-submit="saveEdit">
+                                <input type="number" step="any" min="0" class="form-control form-control-sm o_bcce_qty_input" t-model="state.editing.value"/>
+                                <button class="btn btn-sm btn-primary o_bcce_qty_save" type="submit"><i class="fa fa-check"/></button>
+                            </form>
+                        </t>
+                        <button t-else="" class="o_bcce_qty btn btn-link p-0" t-att-disabled="!d.rules.manual_allowed" t-on-click="() => this.startEditMove(move)">
+                            <span class="o_bcce_done_qty" t-esc="fmt(move.done)"/>
+                            <span class="o_bcce_demand"> / <t t-esc="fmt(move.demand)"/> <t t-esc="move.uom"/></span>
+                            <span t-if="offlineAdds.adds[move.move_id]" class="badge text-bg-warning ms-1 o_bcce_offline_add">+<t t-esc="fmt(offlineAdds.adds[move.move_id])"/></span>
+                        </button>
+                        <button t-if="move.tracking === 'none' and !d.state.includes('done') and d.rules.manual_allowed" class="btn btn-sm btn-light o_bcce_plus" t-on-click="() => this.increment(move)" title="+1">
+                            <i class="fa fa-plus"/>
+                        </button>
+                    </div>
+                    <ul class="o_bcce_detail list-unstyled mb-0" t-if="detailLines(move).length">
+                        <li t-foreach="detailLines(move)" t-as="line" t-key="line.id" class="d-flex gap-2 align-items-center"
+                            t-att-class="line.id === state.ctx.last_line_id ? 'o_bcce_line_active' : ''">
+                            <span class="flex-grow-1 text-truncate">
+                                <t t-if="d.multi_location">
+                                    <t t-if="d.code !== 'incoming'"><t t-esc="line.location"/></t>
+                                    <t t-if="d.code !== 'outgoing'"><i class="fa fa-long-arrow-right mx-1"/><t t-esc="line.location_dest"/></t>
+                                </t>
+                                <span t-if="line.lot" class="ms-1 o_bcce_lot"><i class="fa fa-barcode me-1"/><t t-esc="line.lot"/></span>
+                                <span t-if="line.package" class="ms-1"><i class="fa fa-archive me-1"/><t t-esc="line.package"/></span>
+                                <span t-if="line.result_package" class="ms-1 o_bcce_rpack"><i class="fa fa-long-arrow-right me-1"/><i class="fa fa-archive me-1"/><t t-esc="line.result_package"/></span>
+                            </span>
+                            <t t-if="state.editing and state.editing.kind === 'line' and state.editing.id === line.id">
+                                <form class="d-flex gap-1" t-on-submit="saveEdit">
+                                    <input type="number" step="any" min="0" class="form-control form-control-sm o_bcce_qty_input" t-model="state.editing.value"/>
+                                    <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check"/></button>
+                                </form>
+                            </t>
+                            <button t-else="" class="btn btn-link btn-sm p-0 o_bcce_line_qty" t-att-disabled="!d.rules.manual_allowed" t-on-click="() => this.startEditLine(line)">
+                                <t t-esc="fmt(line.bc_qty)"/><t t-if="line.reserved"> / <t t-esc="fmt(line.reserved)"/></t>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div t-if="state.adding" class="o_bcce_add px-3 py-2">
+                <input class="form-control o_bcce_add_input" placeholder="Search a product" t-on-input="onAddInput" t-att-value="state.addTerm"/>
+                <div class="list-group mt-1">
+                    <button t-foreach="state.addResults" t-as="r" t-key="r[0]" class="list-group-item list-group-item-action o_bcce_add_result"
+                        t-on-click="() => this.addProduct(r[0])" t-esc="r[1]"/>
+                </div>
+            </div>
+
+            <footer t-if="!state.done and d.state === 'done' and props.model === 'stock.picking'" class="o_bcce_footer d-flex gap-2 p-2">
+                <span class="flex-grow-1 align-self-center text-muted">This transfer is done.</span>
+                <button class="btn btn-secondary o_bcce_return" t-on-click="createReturn"><i class="fa fa-undo me-1"/>Create return</button>
+            </footer>
+            <footer t-if="!state.done and d.state !== 'done'" class="o_bcce_footer d-flex gap-2 p-2">
+                <button t-if="d.rules.manual_allowed" class="btn btn-light o_bcce_add_btn" t-att-disabled="busy" t-on-click="toggleAdd"><i class="fa fa-plus me-1"/>Product</button>
+                <button t-if="d.use_packages" class="btn btn-light o_bcce_pack_btn" t-att-disabled="busy" t-on-click="putInPack"><i class="fa fa-archive me-1"/>Pack</button>
+                <button class="btn btn-primary flex-grow-1 o_bcce_validate" t-att-disabled="busy" t-on-click="() => this.validate()">
+                    <i class="fa fa-check me-1"/>Validate
+                </button>
+            </footer>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.InventoryCount">
+        <div class="o_bcce_inventory d-flex flex-column h-100" t-if="state.data">
+            <t t-set="d" t-value="state.data"/>
+            <header class="o_bcce_op_header px-3 py-2">
+                <div class="o_bcce_op_name">Inventory count</div>
+                <div class="o_bcce_op_sub small">
+                    <t t-if="d.ctx.location_name"><i class="fa fa-map-marker me-1"/><t t-esc="d.ctx.location_name"/></t>
+                    <t t-else="">Scan a location, then the products it holds.</t>
+                    <t t-if="d.ctx.package_name"> / <i class="fa fa-archive me-1"/><t t-esc="d.ctx.package_name"/></t>
+                </div>
+            </header>
+            <div t-if="d.ctx.pending_product_name" class="o_bcce_ctx px-3 pt-2">
+                <span class="o_bcce_chip o_bcce_chip_lot"><i class="fa fa-barcode me-1"/>Lot/serial for <t t-esc="d.ctx.pending_product_name"/></span>
+            </div>
+            <div t-if="d.feedback and d.feedback.message" class="o_bcce_feedback mx-3 mt-2" t-attf-class="o_bcce_fb_{{d.feedback.level}}">
+                <span t-esc="d.feedback.message"/>
+                <t t-if="d.feedback.unknown_barcode">
+                    <button t-if="d.can_create_product" class="btn btn-sm btn-light ms-2 o_bcce_create_product"
+                        t-on-click="() => this.createProduct(d.feedback.unknown_barcode)">Create product</button>
+                    <button t-else="" class="btn btn-sm btn-light ms-2 o_bcce_request_product"
+                        t-on-click="() => this.requestProduct(d.feedback.unknown_barcode)">Ask for this product</button>
+                </t>
+            </div>
+            <div class="o_bcce_lines flex-grow-1 px-3 py-2">
+                <div t-if="!d.counted.length and !d.expected.length" class="text-muted text-center py-5">Nothing counted yet.</div>
+                <div t-foreach="d.counted" t-as="row" t-key="row.id" class="o_bcce_move o_bcce_counted"
+                    t-att-class="row.id === d.ctx.last_quant_id ? 'o_bcce_active' : ''">
+                    <div class="d-flex align-items-start gap-2">
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="o_bcce_product text-truncate" t-esc="row.product"/>
+                            <div class="o_bcce_codes small">
+                                <t t-esc="row.location"/>
+                                <span t-if="row.lot" class="ms-1"><i class="fa fa-barcode me-1"/><t t-esc="row.lot"/></span>
+                                <span t-if="row.package" class="ms-1"><i class="fa fa-archive me-1"/><t t-esc="row.package"/></span>
+                                <span t-if="d.ctx.all_users and row.user" class="ms-1"><i class="fa fa-user me-1"/><t t-esc="row.user"/></span>
+                            </div>
+                        </div>
+                        <t t-if="state.editing and state.editing.id === row.id">
+                            <form class="d-flex gap-1" t-on-submit="saveEdit">
+                                <input type="number" step="any" min="0" class="form-control form-control-sm o_bcce_qty_input" t-model="state.editing.value"/>
+                                <button class="btn btn-sm btn-primary" type="submit"><i class="fa fa-check"/></button>
+                            </form>
+                        </t>
+                        <button t-else="" class="o_bcce_qty btn btn-link p-0 o_bcce_inv_qty" t-on-click="() => this.startEdit(row)">
+                            <span class="o_bcce_done_qty" t-esc="fmt(row.counted)"/>
+                            <span class="o_bcce_demand"> / <t t-esc="fmt(row.quantity)"/> <t t-esc="row.uom"/></span>
+                        </button>
+                        <button class="btn btn-sm btn-light" t-on-click="() => this.remove(row)" title="Remove count"><i class="fa fa-times"/></button>
+                    </div>
+                    <div t-if="row.diff" class="small" t-att-class="row.diff > 0 ? 'text-success' : 'text-danger'">
+                        Difference: <t t-if="row.diff > 0">+</t><t t-esc="fmt(row.diff)"/>
+                    </div>
+                </div>
+                <t t-if="d.expected.length">
+                    <h6 class="text-muted mt-3">Not counted yet in this location</h6>
+                    <div t-foreach="d.expected" t-as="row" t-key="row.id" class="o_bcce_move o_bcce_expected d-flex gap-2 align-items-center">
+                        <div class="flex-grow-1 min-w-0">
+                            <div class="text-truncate" t-esc="row.product"/>
+                            <div class="o_bcce_codes small"><t t-if="row.lot"><t t-esc="row.lot"/> </t>On hand: <t t-esc="fmt(row.quantity)"/> <t t-esc="row.uom"/></div>
+                        </div>
+                        <button class="btn btn-sm btn-light o_bcce_count_expected" t-on-click="() => this.countExpected(row)" title="Count as on hand"><i class="fa fa-check"/></button>
+                    </div>
+                </t>
+            </div>
+            <footer class="o_bcce_footer d-flex gap-2 p-2 align-items-center">
+                <t t-if="d.is_supervisor">
+                    <button class="btn btn-light o_bcce_all_users" t-att-class="d.ctx.all_users ? 'active' : ''" t-on-click="toggleAllUsers">
+                        <i class="fa fa-users me-1"/><t t-if="d.ctx.all_users">Everyone</t><t t-else="">Mine</t>
+                    </button>
+                    <button t-if="d.ctx.location_id" class="btn btn-light o_bcce_zero" t-on-click="zeroUncounted">Uncounted = 0</button>
+                    <button class="btn btn-primary flex-grow-1 o_bcce_apply o_bcce_validate" t-att-disabled="!d.counted.length" t-on-click="apply">
+                        <i class="fa fa-check me-1"/>Apply
+                    </button>
+                </t>
+                <div t-else="" class="text-muted small flex-grow-1 text-center o_bcce_wait_supervisor">Counts are applied by a supervisor.</div>
+            </footer>
+        </div>
+    </t>
+
+    <t t-name="stock_barcode_ce.Scrap">
+        <div class="o_bcce_scrap d-flex flex-column h-100" t-if="state.data">
+            <t t-set="d" t-value="state.data"/>
+            <header class="o_bcce_op_header px-3 py-2">
+                <div class="o_bcce_op_name">Scrap</div>
+                <div class="o_bcce_op_sub small">Scan the location (optional), the product and its lot, then enter the quantity.</div>
+            </header>
+            <div t-if="d.feedback and d.feedback.message" class="o_bcce_feedback mx-3 mt-2" t-attf-class="o_bcce_fb_{{d.feedback.level}}">
+                <span t-esc="d.feedback.message"/>
+            </div>
+            <div class="o_bcce_lines flex-grow-1 px-3 py-2">
+                <div class="o_bcce_move">
+                    <div class="small text-muted">Location</div>
+                    <div class="o_bcce_scrap_loc"><t t-if="d.location" t-esc="d.location"/><t t-else="">Main stock (scan a location to change)</t></div>
+                </div>
+                <div class="o_bcce_move">
+                    <div class="small text-muted">Product</div>
+                    <div class="o_bcce_product o_bcce_scrap_product"><t t-if="d.product" t-esc="d.product"/><t t-else="">Scan a product</t></div>
+                    <div t-if="d.lot" class="small"><i class="fa fa-barcode me-1"/><t t-esc="d.lot"/></div>
+                    <div t-if="d.available !== null and d.available !== undefined" class="small text-muted">Available: <t t-esc="d.available"/> <t t-esc="d.uom"/></div>
+                </div>
+                <div class="o_bcce_move d-flex gap-2 align-items-center">
+                    <label class="small text-muted mb-0">Quantity</label>
+                    <input type="number" min="0" step="any" class="form-control o_bcce_scrap_qty" t-model="state.qty"/>
+                </div>
+                <div class="o_bcce_move" t-if="d.reasons.length">
+                    <div class="small text-muted mb-1">Reason</div>
+                    <div class="d-flex flex-wrap gap-1">
+                        <button t-foreach="d.reasons" t-as="r" t-key="r.id" class="btn btn-sm o_bcce_scrap_reason"
+                            t-att-class="state.reasons.includes(r.id) ? 'btn-warning' : 'btn-light'"
+                            t-on-click="() => this.toggleReason(r.id)" t-esc="r.name"/>
+                    </div>
+                </div>
+            </div>
+            <footer class="o_bcce_footer d-flex gap-2 p-2">
+                <button class="btn btn-primary flex-grow-1 o_bcce_validate o_bcce_scrap_confirm" t-att-disabled="!d.product or state.busy" t-on-click="confirm">
+                    <i class="fa fa-trash me-1"/>Scrap
+                </button>
+            </footer>
+        </div>
+    </t>
+</templates>

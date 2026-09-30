@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* barcode_camera_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-20 10:26+0000\n"
+"PO-Revision-Date: 2026-09-20 10:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Add"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.js:0
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Camera unavailable"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Done"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Last scan:"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/fields/camera_handler_field.xml:0
+msgid "Scan"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.js:0
+#: code:addons/barcode_camera_ce/static/src/fields/camera_char_field.xml:0
+#: code:addons/barcode_camera_ce/static/src/systray/camera_systray.xml:0
+msgid "Scan with camera"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Switch camera"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid ""
+"The camera needs HTTPS and browser permission. You can still type the code "
+"below."
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "Type a barcode"
+msgstr ""
+
+#. module: barcode_camera_ce
+#. odoo-javascript
+#: code:addons/barcode_camera_ce/static/src/dialog/camera_scan_dialog.xml:0
+msgid "scanned)"
+msgstr ""

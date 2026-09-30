@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="product_barcode_quick_view_form_stock" model="ir.ui.view">
+        <field name="name">product.barcode.quick.form.stock</field>
+        <field name="model">product.barcode.quick</field>
+        <field name="inherit_id" ref="product_barcode_quick.product_barcode_quick_view_form"/>
+        <field name="arch" type="xml">
+            <field name="categ_id" position="before">
+                <field name="is_storable"/>
+                <field name="tracking" invisible="not is_storable" groups="stock.group_production_lot"/>
+            </field>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="code_label_page">
+        <!-- expects: w, h (mm), title, subtitle, code -->
+        <div class="o_th_label" t-attf-style="width: {{w}}mm; height: {{h}}mm; padding: 1.5mm 2mm;">
+            <div class="o_th_name" t-attf-style="font-size: {{fs}}pt;"><span t-out="title"/></div>
+            <div t-if="subtitle" class="o_th_ref" style="margin-top: 0.3mm;"><span t-out="subtitle"/></div>
+            <div class="o_th_bottom">
+                <div class="o_th_barcode">
+                    <div t-out="code" t-options="{'widget': 'barcode', 'quiet': 0, 'symbology': 'Code128', 'img_style': 'width:%smm;height:%smm' % (w - 4, bh)}"/>
+                </div>
+                <div class="o_th_code"><span t-out="code"/></div>
+            </div>
+        </div>
+    </template>
+
+    <template id="report_location_label_th40x30">
+        <t t-call="web.html_container">
+            <div class="article o_th_article">
+                <t t-call="product_barcode_quick.thermal_label_style"/>
+                <t t-foreach="docs" t-as="loc">
+                    <t t-call="stock_barcode_ce.code_label_page">
+                        <t t-set="w" t-value="40"/><t t-set="h" t-value="30"/><t t-set="fs" t-value="11"/><t t-set="bh" t-value="11"/>
+                        <t t-set="title" t-value="loc.name"/>
+                        <t t-set="subtitle" t-value="loc.location_id.complete_name"/>
+                        <t t-set="code" t-value="loc.barcode or loc.complete_name"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_location_label_th60x40">
+        <t t-call="web.html_container">
+            <div class="article o_th_article">
+                <t t-call="product_barcode_quick.thermal_label_style"/>
+                <t t-foreach="docs" t-as="loc">
+                    <t t-call="stock_barcode_ce.code_label_page">
+                        <t t-set="w" t-value="60"/><t t-set="h" t-value="40"/><t t-set="fs" t-value="16"/><t t-set="bh" t-value="15"/>
+                        <t t-set="title" t-value="loc.name"/>
+                        <t t-set="subtitle" t-value="loc.location_id.complete_name"/>
+                        <t t-set="code" t-value="loc.barcode or loc.complete_name"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_package_label_th60x40">
+        <t t-call="web.html_container">
+            <div class="article o_th_article">
+                <t t-call="product_barcode_quick.thermal_label_style"/>
+                <t t-foreach="docs" t-as="pack">
+                    <t t-call="stock_barcode_ce.code_label_page">
+                        <t t-set="w" t-value="60"/><t t-set="h" t-value="40"/><t t-set="fs" t-value="14"/><t t-set="bh" t-value="15"/>
+                        <t t-set="title" t-value="pack.name"/>
+                        <t t-set="subtitle" t-value="pack.content_description"/>
+                        <t t-set="code" t-value="pack.name"/>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_barcode_commands">
+        <t t-call="web.html_container">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                    <h2>Barcode commands</h2>
+                    <p class="text-muted">Scan these codes in the Barcode app instead of tapping the buttons.</p>
+                    <t t-set="commands" t-value="[
+                        ('O-BTN.validate', 'Validate'),
+                        ('O-BTN.pack', 'Put in pack'),
+                        ('O-BTN.discard', 'Clear scan context'),
+                        ('O-BTN.print-op', 'Print operations'),
+                        ('O-BTN.print-slip', 'Print delivery slip'),
+                        ('O-CMD.MAIN-MENU', 'Main menu'),
+                    ]"/>
+                    <table class="table table-borderless">
+                        <tr t-foreach="commands" t-as="cmd">
+                            <td style="width: 45%; vertical-align: middle;"><h4 t-out="cmd[1]"/><small t-out="cmd[0]"/></td>
+                            <td><div t-out="cmd[0]" t-options="{'widget': 'barcode', 'symbology': 'Code128', 'img_style': 'width:90mm;height:18mm'}"/></td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

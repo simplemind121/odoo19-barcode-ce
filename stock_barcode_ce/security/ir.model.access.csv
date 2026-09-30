@@ -1,0 +1,20 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_stock_bin_generator,stock.bin.generator,model_stock_bin_generator,stock.group_stock_manager,1,1,1,1
+access_scan_log_supervisor,scan log supervisor,model_stock_barcode_scan_log,group_barcode_supervisor,1,0,0,0
+access_scan_log_manager,scan log manager,model_stock_barcode_scan_log,stock.group_stock_manager,1,0,0,1
+access_health_manager,barcode health,model_stock_barcode_health,stock.group_stock_manager,1,1,1,1
+access_health_line_manager,barcode health line,model_stock_barcode_health_line,stock.group_stock_manager,1,1,1,1
+access_op_stock_picking,operator read stock_picking,stock.model_stock_picking,group_barcode_operator,1,0,0,0
+access_op_stock_move,operator read stock_move,stock.model_stock_move,group_barcode_operator,1,0,0,0
+access_op_stock_move_line,operator read stock_move_line,stock.model_stock_move_line,group_barcode_operator,1,0,0,0
+access_op_stock_quant,operator read stock_quant,stock.model_stock_quant,group_barcode_operator,1,0,0,0
+access_op_stock_location,operator read stock_location,stock.model_stock_location,group_barcode_operator,1,0,0,0
+access_op_stock_lot,operator read stock_lot,stock.model_stock_lot,group_barcode_operator,1,0,0,0
+access_op_stock_package,operator read stock_package,stock.model_stock_package,group_barcode_operator,1,0,0,0
+access_op_stock_picking_type,operator read stock_picking_type,stock.model_stock_picking_type,group_barcode_operator,1,0,0,0
+access_op_stock_warehouse,operator read stock_warehouse,stock.model_stock_warehouse,group_barcode_operator,1,0,0,0
+access_op_stock_picking_batch,operator read stock_picking_batch,stock_picking_batch.model_stock_picking_batch,group_barcode_operator,1,0,0,0
+access_scan_event_supervisor,scan event supervisor,model_stock_barcode_scan_event,group_barcode_supervisor,1,0,0,0
+access_scan_event_manager,scan event manager,model_stock_barcode_scan_event,stock.group_stock_manager,1,0,0,0
+access_op_stock_scrap,operator read scrap,stock.model_stock_scrap,group_barcode_operator,1,0,0,0
+access_op_scrap_reason,operator read scrap reason,stock.model_stock_scrap_reason_tag,group_barcode_operator,1,0,0,0

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_stock_barcode_ce_main" model="ir.actions.client">
+        <field name="name">Barcode</field>
+        <field name="tag">stock_barcode_ce.main</field>
+    </record>
+</odoo>

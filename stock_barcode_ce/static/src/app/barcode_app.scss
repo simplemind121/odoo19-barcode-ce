@@ -1,0 +1,164 @@
+// Warehouse scanner: high contrast, big touch targets, readable at arm's length.
+$bcce-ink: #16302c;
+$bcce-teal: #1f6a61;
+$bcce-teal-dark: #164d47;
+$bcce-amber: #ffc43d;
+$bcce-paper: #f4f6f5;
+
+.o_bcce_app {
+    background: $bcce-paper;
+    color: $bcce-ink;
+
+    .o_bcce_scanbar {
+        background: $bcce-teal;
+        .o_bcce_nav { color: #fff; font-size: 1.25rem; padding: 0.25rem 0.5rem; }
+        .o_bcce_scan_input {
+            border: 0;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.03em;
+        }
+    }
+    .o_bcce_camera {
+        position: relative;
+        height: 32vh;
+        min-height: 180px;
+        background: #0e1d1b;
+    }
+    .o_bcce_hint { color: lighten($bcce-ink, 25%); }
+
+    .o_bcce_tiles {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 0.75rem;
+    }
+    .o_bcce_tile {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        min-height: 110px;
+        padding: 1rem;
+        border: 0;
+        border-left: 6px solid $bcce-teal;
+        border-radius: 4px;
+        background: #fff;
+        color: $bcce-ink;
+        text-align: left;
+        font-weight: 600;
+        font-size: 1.05rem;
+        i { font-size: 1.6rem; color: $bcce-teal; }
+        &:active { background: darken(#fff, 4%); }
+        .o_bcce_tile_badge { font-weight: 400; color: lighten($bcce-ink, 30%); }
+    }
+    .o_bcce_tile_inv { border-left-color: #c77d12; i { color: #c77d12; } }
+    .o_bcce_tile_batch, .o_bcce_tile_wave { border-left-color: #3b5b8f; i { color: #3b5b8f; } }
+    .o_bcce_tile_product { border-left-color: #6b6f73; i { color: #6b6f73; } }
+    .o_bcce_tile_scrap { border-left-color: #b3261e; i { color: #b3261e; } }
+    .o_bcce_scrap_qty { max-width: 8rem; }
+
+    .o_bcce_type { padding-top: 0.9rem; padding-bottom: 0.9rem; }
+    .o_bcce_type_icon { color: $bcce-teal; }
+    .o_bcce_ready { background: $bcce-teal !important; }
+    .o_bcce_ref { font-variant-numeric: tabular-nums; }
+
+    .o_bcce_op_header {
+        background: #fff;
+        border-bottom: 1px solid darken($bcce-paper, 8%);
+        .o_bcce_op_name { font-size: 1.2rem; font-weight: 700; }
+        .o_bcce_op_sub, .o_bcce_route { color: lighten($bcce-ink, 30%); }
+    }
+    .o_bcce_progress { height: 5px; .progress-bar { background: $bcce-teal; } }
+
+    .o_bcce_chip {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.15rem 0.6rem;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        background: #fff;
+        border: 1px solid darken($bcce-paper, 12%);
+    }
+    .o_bcce_chip_dest { border-color: $bcce-teal; color: $bcce-teal-dark; }
+    .o_bcce_chip_lot { border-color: #c77d12; color: #8a5409; }
+
+    .o_bcce_feedback {
+        padding: 0.55rem 0.8rem;
+        border-radius: 4px;
+        font-weight: 600;
+    }
+    .o_bcce_fb_success { background: #dff3e6; color: #11532c; }
+    .o_bcce_fb_info { background: #e4ecf7; color: #203e66; }
+    .o_bcce_fb_warning { background: #fff1cc; color: #6b4a00; }
+    .o_bcce_fb_danger { background: #fbe0de; color: #8a1c14; }
+
+    .o_bcce_sync {
+        padding: 0.45rem 0.8rem;
+        border-radius: 4px;
+        background: #e4ecf7;
+        color: #203e66;
+        font-weight: 600;
+        &.o_bcce_sync_offline { background: #fff1cc; color: #6b4a00; }
+    }
+    .o_bcce_rejected {
+        padding: 0.45rem 0.8rem;
+        border-radius: 4px;
+        background: #fbe0de;
+        color: #8a1c14;
+    }
+    .o_bcce_presence { color: $bcce-teal-dark; }
+    .o_bcce_move {
+        background: #fff;
+        border-radius: 4px;
+        border-left: 5px solid transparent;
+        padding: 0.65rem 0.75rem;
+        margin-bottom: 0.5rem;
+        transition: border-color 0.2s;
+        &.o_bcce_partial { border-left-color: $bcce-amber; }
+        &.o_bcce_complete { border-left-color: #2e9a57; background: #f3fbf6; }
+        &.o_bcce_over { border-left-color: #d9534f; }
+        &.o_bcce_active { box-shadow: 0 0 0 2px $bcce-amber; }
+        &.o_bcce_expected { opacity: 0.75; }
+    }
+    .o_bcce_product { font-weight: 600; }
+    .o_bcce_codes { color: lighten($bcce-ink, 35%); font-variant-numeric: tabular-nums; }
+    .o_bcce_qty {
+        white-space: nowrap;
+        text-decoration: none;
+        color: $bcce-ink;
+        .o_bcce_done_qty { font-size: 1.5rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+        .o_bcce_demand { color: lighten($bcce-ink, 35%); }
+    }
+    .o_bcce_qty_input { width: 6.5rem; }
+    .o_bcce_detail {
+        margin-top: 0.35rem;
+        padding-top: 0.35rem;
+        border-top: 1px dashed darken($bcce-paper, 10%);
+        font-size: 0.85rem;
+        li { padding: 0.1rem 0; }
+        .o_bcce_line_active { font-weight: 700; }
+        .o_bcce_line_qty { font-variant-numeric: tabular-nums; }
+    }
+    .o_bcce_done {
+        background: #dff3e6;
+        border-radius: 4px;
+        h3 { color: #11532c; }
+    }
+    .o_bcce_footer {
+        background: #fff;
+        border-top: 1px solid darken($bcce-paper, 8%);
+        .btn { min-height: 48px; }
+        .o_bcce_validate {
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: $bcce-teal;
+            border-color: $bcce-teal;
+            &:hover, &:active { background: $bcce-teal-dark; border-color: $bcce-teal-dark; }
+        }
+    }
+    .o_bcce_menu { position: absolute; right: 0; z-index: 10; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .o_bcce_app .o_bcce_move { transition: none; }
+}

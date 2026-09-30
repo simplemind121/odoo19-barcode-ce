@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="stock_bin_generator_view_form" model="ir.ui.view">
+        <field name="name">stock.bin.generator.form</field>
+        <field name="model">stock.bin.generator</field>
+        <field name="arch" type="xml">
+            <form string="Generate storage bins">
+                <p class="text-muted">
+                    Creates zone, rack and level locations and one storable bin per position.
+                    Each bin gets a barcode made of the warehouse code and its position.
+                </p>
+                <group>
+                    <group>
+                        <field name="warehouse_id"/>
+                        <field name="parent_location_id"/>
+                        <field name="zones" placeholder="A,B,C"/>
+                        <field name="separator"/>
+                    </group>
+                    <group>
+                        <field name="racks"/>
+                        <field name="levels"/>
+                        <field name="bins"/>
+                        <field name="total" string="Bins to create"/>
+                        <field name="preview" string="First barcode"/>
+                    </group>
+                </group>
+                <footer>
+                    <button name="action_generate" type="object" string="Generate" class="btn-primary"/>
+                    <button special="cancel" string="Discard" class="btn-secondary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_stock_bin_generator" model="ir.actions.act_window">
+        <field name="name">Generate storage bins</field>
+        <field name="res_model">stock.bin.generator</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>

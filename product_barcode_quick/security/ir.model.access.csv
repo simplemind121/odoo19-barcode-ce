@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_barcode_quick_user,product.barcode.quick user,model_product_barcode_quick,base.group_user,1,1,1,1
+access_product_barcode_request_user,product.barcode.request user,model_product_barcode_request,base.group_user,1,0,0,0
+access_product_barcode_request_manager,product.barcode.request manager,model_product_barcode_request,product.group_product_manager,1,1,1,1

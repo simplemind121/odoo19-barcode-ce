@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_barcode_root" name="Barcode" sequence="45"
+              web_icon="product_barcode_quick,static/description/icon.png"
+              action="action_product_scan"/>
+    <menuitem id="menu_product_scan" name="Scan products" parent="menu_barcode_root"
+              action="action_product_scan" sequence="50"/>
+    <menuitem id="menu_product_barcode_request" name="Product requests" parent="menu_barcode_root"
+              action="action_product_barcode_request" sequence="55" groups="product.group_product_manager"/>
+</odoo>

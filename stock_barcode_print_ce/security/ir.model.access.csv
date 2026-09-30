@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_label_agent_manager,label agent manager,model_barcode_label_agent,stock.group_stock_manager,1,1,1,1
+access_label_printer_manager,label printer manager,model_barcode_label_printer,stock.group_stock_manager,1,1,1,1
+access_label_printer_operator,label printer read,model_barcode_label_printer,stock_barcode_ce.group_barcode_operator,1,0,0,0
+access_label_job_manager,label job manager,model_barcode_label_job,stock.group_stock_manager,1,1,1,1
+access_label_job_supervisor,label job supervisor,model_barcode_label_job,stock_barcode_ce.group_barcode_supervisor,1,0,0,0

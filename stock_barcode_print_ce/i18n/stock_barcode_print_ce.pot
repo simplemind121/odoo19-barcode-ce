@@ -1,0 +1,465 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_barcode_print_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 18:53+0000\n"
+"PO-Revision-Date: 2026-09-22 18:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "%(count)s label(s) sent to %(printer)s"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__dpi__203
+msgid "203 dpi"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__dpi__300
+msgid "300 dpi"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__active
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__active
+msgid "Active"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__agent_id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__agent_id
+msgid "Agent"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__company_id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__company_id
+msgid "Company"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid ""
+"Configure a label printer first (Barcode > Configuration > Label printers)."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Connection"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__create_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__create_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__darkness
+msgid "Darkness"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__data
+msgid "Data"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__bc_label_printer_id
+msgid "Default label printer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_direct_mixin
+msgid "Direct label print for list views"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_direct_mixin__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_render__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_product_product__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_location__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_package__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking_batch__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__done_date
+msgid "Done Date"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__dpi
+msgid "Dpi"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__error
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__error
+msgid "Error"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__gap_mm
+msgid "Gap (mm)"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_direct_mixin__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_render__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_product_product__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_location__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_lot__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_package__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking_batch__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_location
+msgid "Inventory Locations"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__tspl_invert
+msgid "Invert text bitmap (TSPL)"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Label"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__label_count
+msgid "Label Count"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__height_mm
+msgid "Label height (mm)"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_agent
+msgid "Label print agent"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_job
+msgid "Label print job"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: lot/serial labels"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: package labels"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: product labels"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_printer
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_printers
+msgid "Label printers"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_printing
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.view_users_form_label_printer
+msgid "Label printing"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.server,name:stock_barcode_print_ce.ir_cron_label_job_gc_ir_actions_server
+msgid "Label printing: clean old jobs, requeue stuck jobs"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__width_mm
+msgid "Label width (mm)"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__language
+msgid "Language"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__last_seen
+msgid "Last Seen"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__write_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__write_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_lot
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__name
+msgid "Name"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid "New token"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "No label printer configured: using PDF instead."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "Nothing to print."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_package
+msgid "Package"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__show_price
+msgid "Price on product labels"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Print a test label"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_agent
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_agents
+msgid "Print agents"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_job
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_jobs
+msgid "Print jobs"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_locations
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_lots
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_packages
+msgid "Print labels on label printer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__done
+msgid "Printed"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__printer_ids
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__printer_id
+msgid "Printer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "Product labels"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__queued
+msgid "Queued"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_job_view_list
+msgid "Retry"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid ""
+"Run the agent on a computer in the warehouse network:\n"
+"                        <code>python3 label_print_agent.py --url https://your-odoo --token TOKEN</code>\n"
+"                        (the script is in the module folder <code>tools/</code>)."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__sent_date
+msgid "Sent Date"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__sent
+msgid "Sent to agent"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__sequence
+msgid "Sequence"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__state
+msgid "State"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__language__tspl
+msgid "TSPL (TSC, Gprinter, Xprinter, HPRT...)"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__target
+msgid "Target"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label %s"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label sent to the agent queue."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid ""
+"The running agent will stop working until you update its token. Continue?"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_printer
+msgid "Thermal label printer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_render
+msgid "Thermal label raw command renderer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "These products have no barcode."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,help:stock_barcode_print_ce.field_barcode_label_printer__tspl_invert
+msgid "Tick if text prints as a black block with white letters."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_job_view_list
+msgid "Time"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__token
+msgid "Token"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_res_users
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__user_id
+msgid "User"
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,help:stock_barcode_print_ce.field_barcode_label_printer__target
+msgid ""
+"Where the agent sends the data: tcp://IP:9100 (network printer), cups:QUEUE "
+"(Linux/macOS), win:PRINTER NAME (Windows), file:/path (test)."
+msgstr ""
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__language__zpl
+msgid "ZPL (Zebra)"
+msgstr ""

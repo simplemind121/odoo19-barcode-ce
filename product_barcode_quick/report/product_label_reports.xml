@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="paperformat_th40x30" model="report.paperformat">
+        <field name="name">Thermal label 40 x 30 mm</field>
+        <field name="default" eval="False"/>
+        <field name="format">custom</field>
+        <field name="page_width">40</field>
+        <field name="page_height">30</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_spacing">0</field>
+        <field name="disable_shrinking" eval="True"/>
+        <field name="dpi">96</field>
+    </record>
+    <record id="paperformat_th50x30" model="report.paperformat">
+        <field name="name">Thermal label 50 x 30 mm</field>
+        <field name="default" eval="False"/>
+        <field name="format">custom</field>
+        <field name="page_width">50</field>
+        <field name="page_height">30</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_spacing">0</field>
+        <field name="disable_shrinking" eval="True"/>
+        <field name="dpi">96</field>
+    </record>
+    <record id="paperformat_th60x40" model="report.paperformat">
+        <field name="name">Thermal label 60 x 40 mm</field>
+        <field name="default" eval="False"/>
+        <field name="format">custom</field>
+        <field name="page_width">60</field>
+        <field name="page_height">40</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">0</field>
+        <field name="margin_bottom">0</field>
+        <field name="margin_left">0</field>
+        <field name="margin_right">0</field>
+        <field name="header_spacing">0</field>
+        <field name="disable_shrinking" eval="True"/>
+        <field name="dpi">96</field>
+    </record>
+
+    <record id="report_product_label_th40x30" model="ir.actions.report">
+        <field name="name">Product label 40x30 (thermal)</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">product_barcode_quick.report_product_label_thermal</field>
+        <field name="report_file">product_barcode_quick.report_product_label_thermal</field>
+        <field name="paperformat_id" ref="paperformat_th40x30"/>
+        <field name="print_report_name">'Labels - %s' % object.display_name</field>
+    </record>
+    <record id="report_product_label_th50x30" model="ir.actions.report">
+        <field name="name">Product label 50x30 (thermal)</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">product_barcode_quick.report_product_label_thermal</field>
+        <field name="report_file">product_barcode_quick.report_product_label_thermal</field>
+        <field name="paperformat_id" ref="paperformat_th50x30"/>
+        <field name="print_report_name">'Labels - %s' % object.display_name</field>
+    </record>
+    <record id="report_product_label_th60x40" model="ir.actions.report">
+        <field name="name">Product label 60x40 (thermal)</field>
+        <field name="model">product.product</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">product_barcode_quick.report_product_label_thermal</field>
+        <field name="report_file">product_barcode_quick.report_product_label_thermal</field>
+        <field name="paperformat_id" ref="paperformat_th60x40"/>
+        <field name="print_report_name">'Labels - %s' % object.display_name</field>
+    </record>
+</odoo>

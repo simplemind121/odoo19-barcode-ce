@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_label_job_gc" model="ir.cron">
+        <field name="name">Label printing: clean old jobs, requeue stuck jobs</field>
+        <field name="model_id" ref="model_barcode_label_job"/>
+        <field name="state">code</field>
+        <field name="code">model._gc_old_jobs()</field>
+        <field name="interval_number">5</field>
+        <field name="interval_type">minutes</field>
+    </record>
+</odoo>

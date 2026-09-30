@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_bcq" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.bcq</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='contacts_setting_container']" position="after">
+                <block title="Product Barcodes" name="bcq_setting_container">
+                    <setting string="In-store barcode prefix" help="First two digits of the EAN-13 codes generated in Odoo (20 or 24-29).">
+                        <field name="bcq_instore_prefix"/>
+                    </setting>
+                    <setting help="Refuse EAN/UPC barcodes with a wrong check digit.">
+                        <field name="bcq_strict_gtin"/>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

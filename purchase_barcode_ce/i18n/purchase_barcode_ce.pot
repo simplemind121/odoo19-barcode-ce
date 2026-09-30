@@ -1,0 +1,102 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* purchase_barcode_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-20 10:26+0000\n"
+"PO-Revision-Date: 2026-09-20 10:26+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "%s cannot be purchased."
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model_terms:ir.ui.view,arch_db:purchase_barcode_ce.purchase_order_form_bcce
+msgid ""
+"<span class=\"text-muted small ms-2\">A hardware scanner also works anywhere"
+" on this page.</span>"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model.fields,field_description:purchase_barcode_ce.field_purchase_order___barcode_scanned
+msgid "Barcode Scanned"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "Create bill for %s"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model.fields,field_description:purchase_barcode_ce.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:purchase_barcode_ce.field_stock_picking__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model.fields,field_description:purchase_barcode_ce.field_purchase_order__id
+#: model:ir.model.fields,field_description:purchase_barcode_ce.field_stock_picking__id
+msgid "ID"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "No product with barcode %s. Create it from Barcode > Scan products."
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "Not purchasable"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "Only requests for quotation can be edited by scanning."
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "Order locked"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model,name:purchase_barcode_ce.model_purchase_order
+msgid "Purchase Order"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model_terms:ir.ui.view,arch_db:purchase_barcode_ce.purchase_order_form_bcce
+msgid "Scan products"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model,name:purchase_barcode_ce.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#. odoo-python
+#: code:addons/purchase_barcode_ce/models/purchase_order.py:0
+msgid "Unknown barcode"
+msgstr ""
+
+#. module: purchase_barcode_ce
+#: model:ir.model.fields,help:purchase_barcode_ce.field_purchase_order___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr ""

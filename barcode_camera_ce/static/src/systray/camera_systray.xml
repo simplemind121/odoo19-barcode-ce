@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="barcode_camera_ce.CameraSystray">
+        <div class="o_bcce_systray o-dropdown dropdown">
+            <button class="btn btn-link o-navbar-button" title="Scan with camera" t-on-click="onClick">
+                <i class="fa fa-lg fa-barcode" role="img" aria-label="Scan with camera"/>
+            </button>
+        </div>
+    </t>
+</templates>

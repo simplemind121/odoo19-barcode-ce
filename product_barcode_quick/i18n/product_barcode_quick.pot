@@ -1,0 +1,550 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_barcode_quick
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 18:53+0000\n"
+"PO-Revision-Date: 2026-09-22 18:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product_barcode_request.py:0
+msgid "%s already exists: scan it again."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.report,print_report_name:product_barcode_quick.report_product_label_th40x30
+#: model:ir.actions.report,print_report_name:product_barcode_quick.report_product_label_th50x30
+#: model:ir.actions.report,print_report_name:product_barcode_quick.report_product_label_th60x40
+msgid "'Labels - %s' % object.display_name"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__barcode
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__barcode
+#: model:ir.ui.menu,name:product_barcode_quick.menu_barcode_root
+msgid "Barcode"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product.py:0
+msgid ""
+"Barcode %(code)s of %(product)s has a wrong check digit. Check the digits, "
+"or disable the check in Settings if the code is not an EAN/UPC."
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/wizard/product_barcode_quick.py:0
+msgid "Barcode %s is already used by another product."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__barcode_warning
+msgid "Barcode Warning"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Camera"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__purchase_ok
+msgid "Can be Purchased"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__sale_ok
+msgid "Can be Sold"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__categ_id
+msgid "Category"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/wizard/product_barcode_quick.py:0
+msgid "Check digit is wrong: this does not look like a valid EAN/UPC."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_product_label_layout
+msgid "Choose the sheet layout to print the labels"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_res_company
+msgid "Companies"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__company_id
+msgid "Company"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_res_config_settings
+msgid "Config Settings"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__standard_price
+msgid "Cost"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product.py:0
+msgid "Could not find a free in-store barcode."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Create"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Create and edit details"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_request_view_list
+msgid "Create product"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_product_barcode_quick
+msgid "Create product from barcode"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_barcode_request__state__done
+msgid "Created"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__create_uid
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__create_date
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Discard"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_label_layout__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_product__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_template__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_report_product_barcode_quick_report_product_label_thermal__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_company__display_name
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,help:product_barcode_quick.field_res_company__bcq_instore_prefix
+#: model:ir.model.fields,help:product_barcode_quick.field_res_config_settings__bcq_instore_prefix
+msgid ""
+"EAN-13 prefix used for barcodes generated in Odoo. 20 and 24-29 are reserved"
+" by GS1 for in-store use; 21-23 are used by Odoo for weight/discount/price "
+"barcodes."
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product_barcode_request.py:0
+msgid "Empty barcode"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_request_view_list
+msgid "First scanned"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.res_config_settings_view_form_bcq
+msgid "First two digits of the EAN-13 codes generated in Odoo (20 or 24-29)."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_label_layout__print_format
+msgid "Format"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Generate"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Generate an in-store EAN-13 code"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_template_form_view_bcq
+msgid "Generate in-store barcode"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.server,name:product_barcode_quick.action_server_bcq_generate_product
+#: model:ir.actions.server,name:product_barcode_quick.action_server_bcq_generate_template
+msgid "Generate in-store barcodes"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_label_layout__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_product__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_template__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_report_product_barcode_quick_report_product_label_thermal__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_company__id
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_request_view_list
+msgid "Ignore"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_barcode_request__state__cancel
+msgid "Ignored"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__image_1920
+msgid "Image"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_company__bcq_instore_prefix
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_config_settings__bcq_instore_prefix
+msgid "In-store Barcode Prefix"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.res_config_settings_view_form_bcq
+msgid "In-store barcode prefix"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__default_code
+msgid "Internal Reference"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__write_uid
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__write_date
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product_barcode_request.py:0
+#: code:addons/product_barcode_quick/wizard/product_barcode_quick.py:0
+#: model:ir.actions.act_window,name:product_barcode_quick.action_product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "New product"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "No product with code"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__note
+msgid "Note"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "On hand:"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Open product"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__print_label
+msgid "Print a label after creation"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Print label"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.js:0
+msgid "Print labels"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_product_template
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__product_id
+msgid "Product"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.res_config_settings_view_form_bcq
+msgid "Product Barcodes"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__name
+msgid "Product Name"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_product_product
+msgid "Product Variant"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.js:0
+msgid "Product created"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.report,name:product_barcode_quick.report_product_label_th40x30
+msgid "Product label 40x30 (thermal)"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.report,name:product_barcode_quick.report_product_label_th50x30
+msgid "Product label 50x30 (thermal)"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.report,name:product_barcode_quick.report_product_label_th60x40
+msgid "Product label 60x40 (thermal)"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.actions.act_window,name:product_barcode_quick.action_product_barcode_request
+#: model:ir.ui.menu,name:product_barcode_quick.menu_product_barcode_request
+msgid "Product requests"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Qty in code:"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Recent scans"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.res_config_settings_view_form_bcq
+msgid "Refuse EAN/UPC barcodes with a wrong check digit."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,help:product_barcode_quick.field_res_company__bcq_strict_gtin
+#: model:ir.model.fields,help:product_barcode_quick.field_res_config_settings__bcq_strict_gtin
+msgid ""
+"Refuse numeric product barcodes of 8, 12, 13 or 14 digits whose check digit "
+"is wrong."
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product_barcode_request.py:0
+msgid "Request sent: a product manager will create %s."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_product_barcode_request
+msgid "Request to create a product for a scanned barcode"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__user_id
+msgid "Requested by"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__list_price
+msgid "Sales Price"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Scan a product"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "Scan or type, or generate an in-store code"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.js:0
+#: model:ir.actions.client,name:product_barcode_quick.action_product_scan
+#: model:ir.ui.menu,name:product_barcode_quick.menu_product_scan
+msgid "Scan products"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "Search"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_label_layout__thermal_show_price
+msgid "Show price on thermal label"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__state
+msgid "State"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "The check digit is wrong; the code may have been misread."
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/res_company.py:0
+msgid "The in-store barcode prefix must be one of %s."
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/models/product.py:0
+msgid "The in-store barcode sequence is missing."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_label_layout__print_format__th40x30
+msgid "Thermal label 40 x 30 mm"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_label_layout__print_format__th50x30
+msgid "Thermal label 50 x 30 mm"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_label_layout__print_format__th60x40
+msgid "Thermal label 60 x 40 mm"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model,name:product_barcode_quick.model_report_product_barcode_quick_report_product_label_thermal
+msgid "Thermal product label"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-python
+#: code:addons/product_barcode_quick/wizard/product_barcode_quick.py:0
+msgid "This barcode is already used by another product."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__count
+msgid "Times scanned"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields.selection,name:product_barcode_quick.selection__product_barcode_request__state__open
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_request_view_search
+msgid "To create"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,help:product_barcode_quick.field_product_barcode_request__origin
+msgid "Transfer or screen where the code was scanned"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_quick__uom_id
+msgid "Unit"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid ""
+"Use a scanner, the camera, or type the code. Unknown codes open a new "
+"product form."
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_company__bcq_strict_gtin
+#: model:ir.model.fields,field_description:product_barcode_quick.field_res_config_settings__bcq_strict_gtin
+msgid "Validate EAN/UPC Check Digit"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model:ir.model.fields,field_description:product_barcode_quick.field_product_barcode_request__origin
+msgid "Where"
+msgstr ""
+
+#. module: product_barcode_quick
+#: model_terms:ir.ui.view,arch_db:product_barcode_quick.product_barcode_quick_view_form
+msgid "e.g. Cola 330ml"
+msgstr ""
+
+#. module: product_barcode_quick
+#. odoo-javascript
+#: code:addons/product_barcode_quick/static/src/product_scan/product_scan.xml:0
+msgid "unknown"
+msgstr ""

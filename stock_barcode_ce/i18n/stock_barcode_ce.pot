@@ -1,0 +1,1923 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_barcode_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 18:53+0000\n"
+"PO-Revision-Date: 2026-09-22 18:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(count)s line(s) packed in %(pack)s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(count)s line(s) will be put in %(loc)s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s %(done)s / %(demand)s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: %(done)s scanned, more than the %(demand)s expected"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%(product)s: %(qty)s counted in %(loc)s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: only %(demand)s expected, you cannot scan more."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%(product)s: only %(demand)s expected."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%(qty)s %(uom)s of %(product)s scrapped (%(ref)s)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s count(s) applied"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is a view location; scan a storable location."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not a goods product."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%s is not a stock location."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not a valid location for this operation."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not expected in this operation; it has been added."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not part of this batch."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is not part of this operation."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s is not tracked in inventory."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is tracked: scan its lot number."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "%s is tracked: scan its lot/serial number."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "%s is tracked: scan its serial number."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "%s uncounted line(s) set to 0"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_barcode_commands
+msgid "'Barcode commands'"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_location_label_th40x30
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_location_label_th60x40
+msgid "'Location labels'"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,print_report_name:stock_barcode_ce.action_report_package_label_th60x40
+msgid "'Package labels'"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_form_bcce
+msgid "<span class=\"o_stat_text\">Scan</span>"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "A serial number can only be counted once."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "A serial number line can only hold 1 unit."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "A supervisor must confirm this transfer."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "A,B,C"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_pack
+msgid "All scanned lines must be put in a pack before validation."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Already done."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Already recorded."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Apply"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Apply counts"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Ask for this product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Available:"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Back"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Backorder:"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+#: model:ir.actions.client,name:stock_barcode_ce.action_stock_barcode_ce_main
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__barcode
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__barcode
+msgid "Barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.report_barcode_commands
+msgid "Barcode commands"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_barcode_commands
+msgid "Barcode commands sheet"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Barcode count"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_barcode_health
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_health
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_health
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Barcode data check"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_health_line
+msgid "Barcode data check line"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_nomenclature
+msgid "Barcode nomenclatures"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Barcode rules"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "Barcode rules read it as \"%s\": POS and scanners may not find the product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_scan_log
+msgid "Barcode scan log"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_scan_event
+msgid "Barcode scan quantity event"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:res.groups.privilege,name:stock_barcode_ce.res_groups_privilege_barcode
+msgid "Barcode scanner"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__batch_id
+msgid "Batch"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Batch transfers"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__bins
+msgid "Bins per level"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Bins to create"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__lot
+msgid "By lots"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__serial
+msgid "By unique serial number"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Camera"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Camera unavailable"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__category
+msgid "Category"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "Check digit does not match"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Clear scanned locations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__scan_uuid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__client_uuid
+msgid "Client scan id"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_bin_generator__zones
+msgid "Comma separated zone codes, e.g. A,B,C"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__company_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__company_id
+msgid "Company"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_ce_config
+msgid "Configuration"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Count as on hand"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_clear
+msgid "Count removed"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_scan
+msgid "Count scan"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_set_qty
+msgid "Count typed"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Counting in %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Counting into package %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_apply
+msgid "Counts applied"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Counts are applied by a supervisor."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Create a backorder?"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Create backorder"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Create product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_product_barcode_quick
+msgid "Create product from barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Create return"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_created
+msgid "Created by barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__create_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid ""
+"Creates zone, rack and level locations and one storable bin per position.\n"
+"                    Each bin gets a barcode made of the warehouse code and its position."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Date"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Day"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Delivery"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_dest_confirmed
+msgid "Destination scanned"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Destination: %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__detail
+msgid "Detail"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__device
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__device
+msgid "Device"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__device
+msgid "Device identifier sent by the scanner client"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Difference:"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Discard"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_res_users__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_resolver__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_batch__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_quant__display_name
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_scrap__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__danger
+msgid "Error"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Errors"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid ""
+"Every product of this location that you did not count will be set to 0 when "
+"you apply."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_dest
+msgid "Every scanned line needs a scanned destination before validation."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Everyone"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Expired lots"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Expired lots in this transfer: %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid ""
+"Finds barcodes that will cause trouble when scanning: wrong check digits, codes the barcode\n"
+"                        rules read as weight/price/lot, codes used twice, products and storable locations without a barcode.\n"
+"                        Nothing is changed unless you press a button."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "First barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Forced validations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "From"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "GS1 barcode read"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Generate"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid ""
+"Generate an in-store barcode for every product listed without a barcode?"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Generate in-store barcodes for products without one"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_bin_generator
+#: model:ir.model,name:stock_barcode_ce.model_stock_bin_generator
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_bin_generator
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_bin_generator_inventory
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_bin_generator_view_form
+msgid "Generate storage bins"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "Generated bins"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__health_id
+msgid "Health"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_res_users__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_resolver__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_batch__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_quant__id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_scrap__id
+msgid "ID"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__info
+msgid "Info"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Internal"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Inventory count"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__kind
+msgid "Kind"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__write_date
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Late"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__level
+msgid "Level"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__levels
+msgid "Levels per rack"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__line_ids
+msgid "Line"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Line not found."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__include_missing
+msgid "List products without barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__location_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__location_id
+msgid "Location"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_location_label_th40x30
+msgid "Location label 40x30 (thermal)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_location_label_th60x40
+msgid "Location label 60x40 (thermal)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Locations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_locations
+msgid "Locations and labels"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Lot"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Lot %(lot)s belongs to %(product)s."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Lot %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__lot_name
+msgid "Lot/Serial"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Lot/serial %s does not exist for this product."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Lot/serial for"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Main menu"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__home_scan
+msgid "Main menu scan"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Main stock (scan a location to change)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__message
+msgid "Message"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__migrated
+msgid "Migrated from version 1"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Mine"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "More"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__move_line_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__move_line_id
+msgid "Move Line"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__transfer
+msgid "Moved to another line"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "New"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "No backorder"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "No barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"No batch in progress. Create batches from Inventory, then scan them here."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_health.py:0
+msgid "No problem found."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__product_barcode_quick__tracking__none
+msgid "No tracking"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "No transfer, operation type, location or product found for %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking_type.py:0
+msgid "No warehouse"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Not counted yet in this location"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Not validated"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Nothing counted yet."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Nothing has been counted yet."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Nothing has been scanned yet."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Nothing has been scanned. Validate all the reserved quantities?"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Nothing left to return on %s."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Nothing scanned"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Nothing to pack: scan products first."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Nothing to process. Tap New to start one."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__success
+msgid "OK"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Offline:"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__old_quantity
+msgid "Old Quantity"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "On hand:"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Only %(qty)s %(uom)s of %(product)s available in %(loc)s."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/barcode_security.py:0
+msgid "Only a barcode supervisor can %s."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Only a barcode supervisor can set uncounted products to zero."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_picking_batch.py:0
+msgid "Only a barcode supervisor can validate expired lots."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Only done transfers can be returned."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Open form"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Opening %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__operation
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Operation"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Operations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:res.groups,name:stock_barcode_ce.group_barcode_operator
+msgid "Operator"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_scan_only
+msgid ""
+"Operators cannot type quantities, add products by hand or validate unscanned"
+" transfers. Supervisors can."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Pack"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"Package %(pack)s contains %(product)s which is not part of this operation."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Package %s counted as complete"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__package_name
+msgid "Package Name"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.report,name:stock_barcode_ce.action_report_package_label_th60x40
+msgid "Package label 60x40 (thermal)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Packing into %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__parent_location_id
+msgid "Parent location"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__picking_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__picking_id
+msgid "Picking"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking_type
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__picking_type_id
+msgid "Picking Type"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Picking from %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__preview
+msgid "Preview"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print delivery slip"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Print labels"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print operations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Print product labels"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Printing delivery slip"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Printing operations"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health_line__product_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__product_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__product_id
+msgid "Product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_move_line
+msgid "Product Moves (Stock Move Line)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__add_product
+msgid "Product added manually"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__missing
+msgid "Product without barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Products"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_picking_type__bc_require_source
+msgid ""
+"Products can only be scanned after their source location (deliveries, "
+"internal transfers)."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__pack
+msgid "Put in pack"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Put these products in a pack before validating: %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__qty
+msgid "Qty"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__quant_id
+msgid "Quant"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid "Quantities"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__quantity
+msgid "Quantity"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__quantity
+msgid "Quantity added or set by this action"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__set_qty
+msgid "Quantity typed"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Quantity updated"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_quant
+msgid "Quants"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__racks
+msgid "Racks per zone"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__nomenclature
+msgid "Read as something else by the barcode rules"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Ready"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Reason"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/main.js:0
+msgid "Receipt"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__resolved_type
+msgid "Recognized as"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Remove count"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Return %s created"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.view_picking_type_form_bcce
+msgid ""
+"Rules applied in the Barcode app to scanner operators. Barcode supervisors "
+"and inventory users can override \"no typed quantities\"."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_health_view_form
+msgid "Run check"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__duplicate
+msgid "Same code used twice"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__scan
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__scan
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_picking_batch_form_bcce
+msgid "Scan"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Scan a location first."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a location, then the products it holds."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan a product to start."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"Scan a transfer, an operation type, a location or a product, or pick a task "
+"below."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Scan context cleared."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_event_ids
+msgid "Scan events"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.actions.act_window,name:stock_barcode_ce.action_stock_barcode_scan_log
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_scan_log
+msgid "Scan log"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_barcode_scan_log.py:0
+msgid "Scan logs cannot be modified."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan lots/serials for tracked products."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scan or type a barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan the destination location of: %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid ""
+"Scan the location (optional), the product and its lot, then enter the "
+"quantity."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scan the lot/serial number to scrap."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scan the product to scrap."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Scan the source location first."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.report_barcode_commands
+msgid "Scan these codes in the Barcode app instead of tapping the buttons."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_dest
+msgid "Scan: destination location required"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_scan_only
+msgid "Scan: no typed quantities"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_pack
+msgid "Scan: packing required"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_block_extra
+msgid "Scan: refuse products not in the transfer"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_block_over
+msgid "Scan: refuse quantities above demand"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_picking_type__bc_require_source
+msgid "Scan: source location required"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_move_line__bc_qty
+msgid "Scanned Quantity"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.ui.menu,name:stock_barcode_ce.menu_stock_barcode_ce_main
+msgid "Scanner"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Scans refused after reconnecting"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__schema_version
+msgid "Schema Version"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/scrap.js:0
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model,name:stock_barcode_ce.model_stock_scrap
+msgid "Scrap"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/scrap.js:0
+msgid "Scrap %(qty)s x %(product)s? This removes it from stock."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scrap from %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Scrapped %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Search a product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Search reference, origin or partner"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__separator
+msgid "Separator"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Serial"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Serial number %s has already been counted."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Serial number %s has already been scanned."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Set to zero"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Set uncounted to zero"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Several products use lot %s: scan the product first."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"Some products were not fully processed. Create a backorder for the rest?"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_barcode_resolver
+msgid "Stock barcode resolver"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__location_missing
+msgid "Storable location without barcode"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_move_line__bc_qty
+msgid ""
+"Sum of the scan events of this line. Writing it records the difference as a "
+"new event."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_health__summary
+msgid "Summary"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:res.groups,name:stock_barcode_ce.group_barcode_supervisor
+msgid "Supervisor"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "That would create %s bins; generate them in smaller chunks (max 5000)."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This is an operation type barcode."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid ""
+"This operation must be scanned: adding products by hand is not allowed."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This operation must be scanned: typing quantities is not allowed."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "This transfer is already done."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "This transfer is done."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_list
+msgid "Time"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "To"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Today"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__total
+msgid "Total"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__is_storable
+msgid "Track Inventory"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_product_barcode_quick__tracking
+msgid "Tracking"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_stock_picking
+msgid "Transfer"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "Typed quantities"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__manual
+msgid "Typed quantity"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Uncounted = 0"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__inv_zero
+msgid "Uncounted set to zero"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,help:stock_barcode_ce.field_stock_barcode_scan_log__client_uuid
+msgid ""
+"Unique id generated by the scanner for each scan; a scan re-sent after a "
+"network failure is recognized and not counted twice."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "Unknown barcode: %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Unknown command %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Unknown product"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "Unknown product GTIN %s"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/inventory.js:0
+msgid "Update the stock of %s counted line(s)?"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model,name:stock_barcode_ce.model_res_users
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_event__user_id
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_barcode_scan_log__user_id
+#: model_terms:ir.ui.view,arch_db:stock_barcode_ce.stock_barcode_scan_log_view_search
+msgid "User"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__operation__validate
+msgid "Validate"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validate all"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validate anyway"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+#: code:addons/stock_barcode_ce/static/src/app/operation.js:0
+msgid "Validated"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Waiting"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__warehouse_id
+msgid "Warehouse"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_log__level__warning
+msgid "Warning"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "Wave transfers"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_scan_event__kind__package
+msgid "Whole package"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "Whole package %s scanned"
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields.selection,name:stock_barcode_ce.selection__stock_barcode_health_line__category__invalid_digit
+msgid "Wrong EAN/UPC check digit"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "You are already in %s."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/barcode_security.py:0
+msgid "You are not allowed to use the barcode scanner."
+msgstr ""
+
+#. module: stock_barcode_ce
+#: model:ir.model.fields,field_description:stock_barcode_ce.field_stock_bin_generator__zones
+msgid "Zones"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "Zones, racks, levels and bins must all be set."
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "also working on this transfer"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_quant.py:0
+msgid "apply inventory counts"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "counted"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/wizard/stock_bin_generator.py:0
+msgid "id"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "late"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "not recognized offline)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "product(s)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "s)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "scan(s) waiting to sync"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_scrap.py:0
+msgid "scrap products"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_ce/static/src/app/templates.xml:0
+msgid "transfer(s)"
+msgstr ""
+
+#. module: stock_barcode_ce
+#. odoo-python
+#: code:addons/stock_barcode_ce/models/stock_picking.py:0
+msgid "validate quantities that were not scanned"
+msgstr ""

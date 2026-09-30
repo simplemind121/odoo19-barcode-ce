@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- One label per page; sizes in mm so wkhtmltopdf maps 1:1 to the thermal roll. -->
+    <template id="thermal_label_style">
+        <style>
+            .o_th_label { position: relative; box-sizing: border-box; overflow: hidden; page-break-after: always;
+                font-family: "Noto Sans CJK SC", "Microsoft YaHei", Arial, sans-serif; color: #000; }
+            .o_th_label:last-child { page-break-after: auto; }
+            html, body, .o_th_article { margin: 0 !important; padding: 0 !important; }
+            body.container { max-width: none; }
+            .o_th_name { font-weight: bold; line-height: 1.15; overflow: hidden; word-break: break-all; }
+            .o_th_row { display: table; width: 100%; }
+            .o_th_cell { display: table-cell; vertical-align: bottom; }
+            .o_th_price { font-weight: bold; text-align: right; white-space: nowrap; }
+            .o_th_code { font-size: 7pt; letter-spacing: 0.5px; text-align: center; }
+            .o_th_ref { font-size: 6.5pt; white-space: nowrap; }
+            .o_th_barcode img { display: block; margin: 0 auto; }
+            .o_th_bottom { position: absolute; left: 1.5mm; right: 1.5mm; bottom: 0.8mm; }
+        </style>
+    </template>
+
+    <template id="report_product_label_thermal">
+        <t t-call="web.html_container">
+            <div class="article o_th_article">
+            <t t-call="product_barcode_quick.thermal_label_style"/>
+            <t t-set="dims" t-value="{'th40x30': (40, 30, 8, 12, 36, 8), 'th50x30': (50, 30, 8.5, 13, 44, 8), 'th60x40': (60, 40, 10, 16, 54, 13)}[thermal_format]"/>
+            <t t-foreach="quantity.items()" t-as="barcode_and_qty_by_product">
+                <t t-set="product" t-value="barcode_and_qty_by_product[0]"/>
+                <t t-foreach="barcode_and_qty_by_product[1]" t-as="barcode_and_qty">
+                    <t t-set="barcode" t-value="barcode_and_qty[0]"/>
+                    <t t-foreach="range(barcode_and_qty[1])" t-as="qty">
+                        <div class="o_th_label" t-attf-style="width: {{dims[0]}}mm; height: {{dims[1]}}mm; padding: 1.2mm 1.5mm;">
+                            <div class="o_th_name" t-attf-style="font-size: {{dims[2]}}pt; height: {{dims[2] * 2.4 * 0.3528}}mm;">
+                                <span t-out="product.display_name"/>
+                            </div>
+                            <div class="o_th_bottom">
+                            <div class="o_th_row">
+                                <div class="o_th_cell o_th_ref"><span t-out="product.default_code or ''"/></div>
+                                <div class="o_th_cell o_th_price" t-if="price_included" t-attf-style="font-size: {{dims[3]}}pt;">
+                                    <t t-if="pricelist">
+                                        <span t-out="pricelist._get_product_price(product, 1, currency=pricelist.currency_id or product.currency_id)"
+                                              t-options="{'widget': 'monetary', 'display_currency': pricelist.currency_id or product.currency_id}"/>
+                                    </t>
+                                    <t t-else="">
+                                        <span t-out="product.lst_price if product._name == 'product.product' else product.list_price"
+                                              t-options="{'widget': 'monetary', 'display_currency': product.currency_id}"/>
+                                    </t>
+                                </div>
+                            </div>
+                            <t t-if="barcode">
+                                <div class="o_th_barcode" style="margin-top: 0.5mm;">
+                                    <div t-out="barcode" t-options="{'widget': 'barcode', 'quiet': 0, 'symbology': 'auto', 'img_style': 'width:%smm;height:%smm' % (dims[4], dims[5])}"/>
+                                </div>
+                                <div class="o_th_code"><span t-out="barcode"/></div>
+                            </t>
+                            </div>
+                        </div>
+                    </t>
+                </t>
+            </t>
+            </div>
+        </t>
+    </template>
+</odoo>

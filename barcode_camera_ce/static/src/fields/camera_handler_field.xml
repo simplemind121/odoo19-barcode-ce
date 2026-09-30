@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="barcode_camera_ce.CameraHandlerField">
+        <button t-if="barcodeCamera.isSupported() and !props.readonly" type="button"
+            class="btn btn-secondary btn-sm o_bcce_handler_btn" t-on-click="openCamera">
+            <i class="fa fa-barcode me-1"/>
+            <t t-if="props.label" t-esc="props.label"/>
+            <t t-else="">Scan</t>
+        </button>
+    </t>
+</templates>

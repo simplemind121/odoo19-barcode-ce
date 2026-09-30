@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- The Barcode app (created by product_barcode_quick) now opens the warehouse scanner. -->
+    <record id="product_barcode_quick.menu_barcode_root" model="ir.ui.menu">
+        <field name="action" ref="action_stock_barcode_ce_main"/>
+    </record>
+    <menuitem id="menu_stock_barcode_ce_main" name="Scanner" parent="product_barcode_quick.menu_barcode_root"
+              action="action_stock_barcode_ce_main" sequence="10" groups="stock_barcode_ce.group_barcode_operator"/>
+    <menuitem id="menu_stock_barcode_ce_config" name="Configuration" parent="product_barcode_quick.menu_barcode_root"
+              sequence="90" groups="stock.group_stock_manager"/>
+    <menuitem id="menu_stock_barcode_scan_log" name="Scan log" parent="product_barcode_quick.menu_barcode_root"
+              action="action_stock_barcode_scan_log" sequence="60"
+              groups="stock_barcode_ce.group_barcode_supervisor"/>
+    <menuitem id="menu_stock_barcode_health" name="Barcode data check" parent="menu_stock_barcode_ce_config"
+              action="action_stock_barcode_health" sequence="5"/>
+    <menuitem id="menu_stock_bin_generator" name="Generate storage bins" parent="menu_stock_barcode_ce_config"
+              action="action_stock_bin_generator" sequence="10"/>
+    <menuitem id="menu_stock_barcode_locations" name="Locations and labels" parent="menu_stock_barcode_ce_config"
+              action="stock.action_location_form" sequence="20"/>
+    <menuitem id="menu_stock_barcode_nomenclature" name="Barcode nomenclatures" parent="menu_stock_barcode_ce_config"
+              action="barcodes.action_barcode_nomenclature_form" sequence="30"/>
+    <menuitem id="menu_stock_bin_generator_inventory" name="Generate storage bins" parent="stock.menu_warehouse_config"
+              action="action_stock_bin_generator" sequence="99" groups="stock.group_stock_manager"/>
+</odoo>

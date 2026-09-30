@@ -1,0 +1,15 @@
+.o_bcce_dialog {
+    .o_bcce_video {
+        position: relative;
+        height: 60vh;
+        max-height: 420px;
+        background: #1d2327;
+        border-radius: 6px;
+        overflow: hidden;
+        color: #e9ecef;
+    }
+    .o_bcce_last strong {
+        font-variant-numeric: tabular-nums;
+        letter-spacing: 0.02em;
+    }
+}

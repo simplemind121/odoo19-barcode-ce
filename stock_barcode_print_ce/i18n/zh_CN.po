@@ -1,0 +1,470 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_barcode_print_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-22 18:53+0000\n"
+"PO-Revision-Date: 2026-09-22 18:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "%(count)s label(s) sent to %(printer)s"
+msgstr "%(count)s 张标签已发送到 %(printer)s"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__dpi__203
+msgid "203 dpi"
+msgstr "203 dpi"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__dpi__300
+msgid "300 dpi"
+msgstr "300 dpi"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__active
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__active
+msgid "Active"
+msgstr "启用"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__agent_id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__agent_id
+msgid "Agent"
+msgstr "打印代理"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_picking_batch
+msgid "Batch Transfer"
+msgstr "批量调拨"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__company_id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__company_id
+msgid "Company"
+msgstr "公司"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid ""
+"Configure a label printer first (Barcode > Configuration > Label printers)."
+msgstr "请先配置标签打印机（条码 > 配置 > 标签打印）。"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Connection"
+msgstr "连接"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__create_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__create_uid
+msgid "Created by"
+msgstr "创建人"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__create_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__create_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__create_date
+msgid "Created on"
+msgstr "创建时间"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__darkness
+msgid "Darkness"
+msgstr "打印浓度"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__data
+msgid "Data"
+msgstr "数据"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__bc_label_printer_id
+msgid "Default label printer"
+msgstr "默认标签打印机"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_direct_mixin
+msgid "Direct label print for list views"
+msgstr "列表直连打印标签"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_direct_mixin__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_render__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_product_product__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_location__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_lot__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_package__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking__display_name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking_batch__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__done_date
+msgid "Done Date"
+msgstr "完成时间"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__dpi
+msgid "Dpi"
+msgstr "分辨率"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__error
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__error
+msgid "Error"
+msgstr "错误"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__gap_mm
+msgid "Gap (mm)"
+msgstr "间隙（mm）"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_direct_mixin__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_render__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_product_product__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_res_users__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_location__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_lot__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_package__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking__id
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_stock_picking_batch__id
+msgid "ID"
+msgstr "ID"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_location
+msgid "Inventory Locations"
+msgstr "库存库位"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__tspl_invert
+msgid "Invert text bitmap (TSPL)"
+msgstr "反转文字位图（TSPL）"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Label"
+msgstr "标签"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__label_count
+msgid "Label Count"
+msgstr "标签张数"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__height_mm
+msgid "Label height (mm)"
+msgstr "标签高度（mm）"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_agent
+msgid "Label print agent"
+msgstr "标签打印代理"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_job
+msgid "Label print job"
+msgstr "标签打印任务"
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: lot/serial labels"
+msgstr "标签打印机：批次/序列号标签"
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: package labels"
+msgstr "标签打印机：包裹标签"
+
+#. module: stock_barcode_print_ce
+#. odoo-javascript
+#: code:addons/stock_barcode_print_ce/static/src/direct_print.xml:0
+msgid "Label printer: product labels"
+msgstr "标签打印机：商品标签"
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_printer
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_printers
+msgid "Label printers"
+msgstr "标签打印机"
+
+#. module: stock_barcode_print_ce
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_printing
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.view_users_form_label_printer
+msgid "Label printing"
+msgstr "标签打印"
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.server,name:stock_barcode_print_ce.ir_cron_label_job_gc_ir_actions_server
+msgid "Label printing: clean old jobs, requeue stuck jobs"
+msgstr "标签打印：清理旧任务、重排卡住的任务"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__width_mm
+msgid "Label width (mm)"
+msgstr "标签宽度（mm）"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__language
+msgid "Language"
+msgstr "指令语言"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__last_seen
+msgid "Last Seen"
+msgstr "最后在线"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__write_uid
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__write_uid
+msgid "Last Updated by"
+msgstr "最后更新人"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__write_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__write_date
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__write_date
+msgid "Last Updated on"
+msgstr "最后更新时间"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_lot
+msgid "Lot/Serial"
+msgstr "批次/序列号"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__name
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__name
+msgid "Name"
+msgstr "名称"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid "New token"
+msgstr "重新生成令牌"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "No label printer configured: using PDF instead."
+msgstr "未配置标签打印机：改用 PDF 打印。"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "Nothing to print."
+msgstr "没有要打印的内容。"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_package
+msgid "Package"
+msgstr "包裹"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__show_price
+msgid "Price on product labels"
+msgstr "商品标签显示价格"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_printer_view_form
+msgid "Print a test label"
+msgstr "打印测试标签"
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_agent
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_agents
+msgid "Print agents"
+msgstr "打印代理"
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.act_window,name:stock_barcode_print_ce.action_barcode_label_job
+#: model:ir.ui.menu,name:stock_barcode_print_ce.menu_label_jobs
+msgid "Print jobs"
+msgstr "打印任务"
+
+#. module: stock_barcode_print_ce
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_locations
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_lots
+#: model:ir.actions.server,name:stock_barcode_print_ce.action_server_print_packages
+msgid "Print labels on label printer"
+msgstr "用标签打印机打印"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__done
+msgid "Printed"
+msgstr "已打印"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__printer_ids
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__printer_id
+msgid "Printer"
+msgstr "打印机"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_product_product
+msgid "Product Variant"
+msgstr "商品变体"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "Product labels"
+msgstr "商品标签"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__queued
+msgid "Queued"
+msgstr "排队中"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_job_view_list
+msgid "Retry"
+msgstr "重试"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid ""
+"Run the agent on a computer in the warehouse network:\n"
+"                        <code>python3 label_print_agent.py --url https://your-odoo --token TOKEN</code>\n"
+"                        (the script is in the module folder <code>tools/</code>)."
+msgstr ""
+"在仓库网络中的电脑上运行打印代理：\n"
+"                        <code>python3 label_print_agent.py --url https://你的odoo地址 --token 令牌</code>\n"
+"                        （脚本在模块目录 <code>tools/</code> 下）。"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__sent_date
+msgid "Sent Date"
+msgstr "发送时间"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_job__state__sent
+msgid "Sent to agent"
+msgstr "已发给代理"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__sequence
+msgid "Sequence"
+msgstr "序号"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__state
+msgid "State"
+msgstr "状态"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__language__tspl
+msgid "TSPL (TSC, Gprinter, Xprinter, HPRT...)"
+msgstr "TSPL（TSC、佳博、芯烨、汉印等）"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_printer__target
+msgid "Target"
+msgstr "目标"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label"
+msgstr "测试标签"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label %s"
+msgstr "测试标签 %s"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/label_printer.py:0
+msgid "Test label sent to the agent queue."
+msgstr "测试标签已加入打印队列。"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_agent_view_form
+msgid ""
+"The running agent will stop working until you update its token. Continue?"
+msgstr "重新生成后，正在运行的代理需要更新令牌才能继续工作。是否继续？"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_printer
+msgid "Thermal label printer"
+msgstr "热敏标签打印机"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_barcode_label_render
+msgid "Thermal label raw command renderer"
+msgstr "热敏标签指令渲染"
+
+#. module: stock_barcode_print_ce
+#. odoo-python
+#: code:addons/stock_barcode_print_ce/models/stock_integration.py:0
+msgid "These products have no barcode."
+msgstr "这些商品没有条码。"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,help:stock_barcode_print_ce.field_barcode_label_printer__tspl_invert
+msgid "Tick if text prints as a black block with white letters."
+msgstr "如果打出来是黑底白字，请勾选此项。"
+
+#. module: stock_barcode_print_ce
+#: model_terms:ir.ui.view,arch_db:stock_barcode_print_ce.barcode_label_job_view_list
+msgid "Time"
+msgstr "时间"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_agent__token
+msgid "Token"
+msgstr "令牌"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_stock_picking
+msgid "Transfer"
+msgstr "调拨单"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model,name:stock_barcode_print_ce.model_res_users
+#: model:ir.model.fields,field_description:stock_barcode_print_ce.field_barcode_label_job__user_id
+msgid "User"
+msgstr "用户"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields,help:stock_barcode_print_ce.field_barcode_label_printer__target
+msgid ""
+"Where the agent sends the data: tcp://IP:9100 (network printer), cups:QUEUE "
+"(Linux/macOS), win:PRINTER NAME (Windows), file:/path (test)."
+msgstr ""
+"代理把数据发往何处：tcp://IP:9100（网口打印机）、cups:队列名（Linux/macOS）、win:打印机名（Windows）、file:/路径（测试）。"
+
+#. module: stock_barcode_print_ce
+#: model:ir.model.fields.selection,name:stock_barcode_print_ce.selection__barcode_label_printer__language__zpl
+msgid "ZPL (Zebra)"
+msgstr "ZPL（斑马）"

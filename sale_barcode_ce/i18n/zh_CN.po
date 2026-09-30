@@ -1,0 +1,103 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* sale_barcode_ce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-20 09:30+0000\n"
+"PO-Revision-Date: 2026-09-20 09:30+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: zh_CN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "%s cannot be sold."
+msgstr "%s 不可销售。"
+
+#. module: sale_barcode_ce
+#: model_terms:ir.ui.view,arch_db:sale_barcode_ce.view_order_form_bcce
+msgid ""
+"<span class=\"text-muted small ms-2\">A hardware scanner also works anywhere"
+" on this page.</span>"
+msgstr "<span class=\"text-muted small ms-2\">扫码枪在本页面任意位置都可直接使用。</span>"
+
+#. module: sale_barcode_ce
+#: model:ir.model.fields,field_description:sale_barcode_ce.field_sale_order___barcode_scanned
+msgid "Barcode Scanned"
+msgstr "已扫条码"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "Create invoice for %s"
+msgstr "为 %s 开票"
+
+#. module: sale_barcode_ce
+#: model:ir.model.fields,field_description:sale_barcode_ce.field_sale_order__display_name
+#: model:ir.model.fields,field_description:sale_barcode_ce.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "显示名称"
+
+#. module: sale_barcode_ce
+#: model:ir.model.fields,field_description:sale_barcode_ce.field_sale_order__id
+#: model:ir.model.fields,field_description:sale_barcode_ce.field_stock_picking__id
+msgid "ID"
+msgstr "ID"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "No product with barcode %s. Create it from Barcode > Scan products."
+msgstr "没有条码为 %s 的商品。请在 条码 > 扫码查商品 中新建。"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "Not sellable"
+msgstr "不可销售"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "Only quotations can be edited by scanning."
+msgstr "只有报价单可以扫码编辑。"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "Order locked"
+msgstr "订单已锁定"
+
+#. module: sale_barcode_ce
+#: model:ir.model,name:sale_barcode_ce.model_sale_order
+msgid "Sales Order"
+msgstr "销售订单"
+
+#. module: sale_barcode_ce
+#: model_terms:ir.ui.view,arch_db:sale_barcode_ce.view_order_form_bcce
+msgid "Scan products"
+msgstr "扫码查商品"
+
+#. module: sale_barcode_ce
+#: model:ir.model,name:sale_barcode_ce.model_stock_picking
+msgid "Transfer"
+msgstr "调拨"
+
+#. module: sale_barcode_ce
+#. odoo-python
+#: code:addons/sale_barcode_ce/models/sale_order.py:0
+msgid "Unknown barcode"
+msgstr "未知条码"
+
+#. module: sale_barcode_ce
+#: model:ir.model.fields,help:sale_barcode_ce.field_sale_order___barcode_scanned
+msgid "Value of the last barcode scanned."
+msgstr "最后一次扫描的条码值。"
