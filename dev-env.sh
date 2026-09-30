@@ -124,7 +124,8 @@ cat > "$PROJECT_DIR/scripts/test.sh" <<'EOF'
 #   ./scripts/test.sh stock_barcode_ce TestBarcodeV2   # 只测一个测试类
 #   ./scripts/test.sh --core               # 跑 Odoo 自带库存测试做回归对照
 set -euo pipefail
-C=barcode-dev-odoo-1
+# 用一次性容器跑：开发容器里已有占着 8069 的 Odoo 服务，PDF 渲染会去请求它并和测试事务互相等锁
+DEVENV="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/.devenv"
 ALL="barcode_camera_ce,product_barcode_quick,stock_barcode_ce,stock_barcode_print_ce,sale_barcode_ce,purchase_barcode_ce,pos_barcode_ce"
 DB="test_$(date +%H%M%S)"
 
@@ -138,7 +139,7 @@ else
 fi
 
 echo "==> 数据库 $DB，模块 $MODULES"
-docker exec "$C" odoo -d "$DB" --db_host=db --db_user=odoo --db_password=odoo \
+docker compose --project-directory "$DEVENV" run --rm -T odoo odoo -d "$DB" --db_host=db --db_user=odoo --db_password=odoo \
     --addons-path=/mnt/odoo-src/addons,/mnt/project \
     -i "$MODULES" --test-tags="$TAGS" --stop-after-init --log-level=test --http-port=8072 2>&1 \
     | tee "/tmp/$DB.log" | grep -E "FAIL|ERROR|SUCCEEDED|tests when loading" || true
