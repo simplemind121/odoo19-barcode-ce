@@ -78,7 +78,10 @@ Useful checks that caught real bugs before:
 ## Testing gotchas
 
 * `bus.bus` notifications are written at commit: call `env.cr.precommit.run()` in tests.
-* PDF rendering in tests needs `with_context(force_report_rendering=True)`.
+* PDF rendering in tests needs `with_context(force_report_rendering=True)`, inside
+  `with self.allow_pdf_render():` — otherwise wkhtmltopdf's asset request blocks on the test
+  transaction and the run hangs. Likewise run tests in a one-off container (`scripts/test.sh` does),
+  not next to a live dev server.
 * External processes hitting the test server need `self.http_request_allow_all = True`, and a
   blocking subprocess while holding the test cursor deadlocks — drive the agent in-process instead.
 * POS product creation requires `product.group_product_manager`.
