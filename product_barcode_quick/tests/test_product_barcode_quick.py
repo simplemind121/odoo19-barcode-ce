@@ -122,8 +122,10 @@ class TestProductBarcodeQuick(TransactionCase):
             "product_ids": [(6, 0, self.cola.ids)], "print_format": "th40x30", "custom_quantity": 2})
         xml_id, data = wiz._prepare_report_data()
         data = json.loads(json.dumps(data))
-        pdf = self.env["ir.actions.report"].with_context(force_report_rendering=True)._render_qweb_pdf(
-            xml_id, [], data=data)[0]
+        # wkhtmltopdf fetches the assets over HTTP: let that request reuse the test cursor
+        with self.allow_pdf_render():
+            pdf = self.env["ir.actions.report"].with_context(force_report_rendering=True)._render_qweb_pdf(
+                xml_id, [], data=data)[0]
         self.assertTrue(pdf.startswith(b"%PDF"))
         from odoo.tools.pdf import PdfFileReader
         import io

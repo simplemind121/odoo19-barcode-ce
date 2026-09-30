@@ -37,7 +37,7 @@ jobs:
 
       - name: Install modules and run tests
         run: |
-          ODOO_ADDONS=$(python3 -c "import odoo, os; print(os.path.join(os.path.dirname(odoo.__file__), 'addons'))")
+          ODOO_ADDONS=/usr/lib/python3/dist-packages/odoo/addons
           TAGS=$(echo "$MODULES" | sed 's/[^,]*/\/&/g')
           odoo -d ci --db_host=db --db_user=odoo --db_password=odoo \
                --addons-path="$ODOO_ADDONS,$GITHUB_WORKSPACE" \
