@@ -8,7 +8,9 @@ Seven Odoo 19 **Community** addons that add camera/scanner barcode workflows (wa
 product entry, label printing, sale/purchase/POS scanning). Enterprise's `stock_barcode` is **not**
 used and must never be copied — everything here is an independent implementation under LGPL-3.
 
-Read `README.md` first for the module map, then `docs/PROJECT_HISTORY.md` — it records why the
+Read `README.md` first for the module map and `docs/README.md` for the documentation index
+(architecture, scanner API, compatibility with stock Odoo, development guide). Then read
+`docs/PROJECT_HISTORY.md` — it records why the
 architecture looks like this, the bugs that shaped it and what has actually been verified (中文). `docs/README_安装与验收.md` is the Chinese
 install/acceptance document handed to the warehouse team; keep it in sync when behaviour changes.
 
@@ -104,6 +106,13 @@ Bigger, separate project (not in this repo): a standalone service for AI carton-
 labels and period reconciliation (quantity, amount, partner accounts), with a thin Odoo adapter.
 The `stock.barcode.scan.event` and `stock.barcode.scan.log` tables are the intended data source for
 it — keep them append-only and versioned (`schema_version`).
+
+## Documentation
+
+Human-facing docs follow the Google Markdown and developer documentation style guides (see
+`CONTRIBUTING.md`). When behaviour changes, update in the same change: `CHANGELOG.md` (Unreleased),
+`docs/compatibility.md` (any difference from stock Odoo), `docs/scanner-api.md` (`bc_*` methods and
+the state object) and the module's `README.md`.
 
 ## Safety rails
 

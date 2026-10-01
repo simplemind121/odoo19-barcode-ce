@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/simplemind121/odoo19-barcode-ce/security/advisories/new
+    about: Report security problems privately. Do not open a public issue.
+  - name: Documentation
+    url: https://github.com/simplemind121/odoo19-barcode-ce/tree/main/docs
+    about: Deployment, label printing, compatibility, architecture and API reference.
